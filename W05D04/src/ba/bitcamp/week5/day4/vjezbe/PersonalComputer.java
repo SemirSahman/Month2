@@ -6,6 +6,14 @@ public abstract class PersonalComputer {
 	private Integer ramMemoray;
 	private Integer price;
 
+	public PersonalComputer(String operativeSystem, Integer ramMemoray,
+			Integer price) {
+		super();
+		this.operativeSystem = operativeSystem;
+		this.ramMemoray = ramMemoray;
+		this.price = price;
+	}
+
 	public String getOperativeSystem() {
 		return operativeSystem;
 	}

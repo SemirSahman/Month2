@@ -6,6 +6,15 @@ public class Workstation extends StationaryComputer {
 	private Integer numOfCPU;
 	private Boolean hasECC;
 
+	public Workstation(String operativeSystem, Integer ramMemoray,
+			Integer price, Integer cpu, Integer psu, Integer hdd,
+			Integer numOfDisplays, Integer numOfCPU, Boolean hasECC) {
+		super(operativeSystem, ramMemoray, price, cpu, psu, hdd);
+		this.numOfDisplays = numOfDisplays;
+		this.numOfCPU = numOfCPU;
+		this.hasECC = hasECC;
+	}
+
 	public Integer getNumOfDisplays() {
 		return numOfDisplays;
 	}

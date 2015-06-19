@@ -6,6 +6,15 @@ public class Laptop extends PortableComputer {
 	private Boolean hasBluetooth;
 	private Boolean hasNumKeyboard;
 
+	public Laptop(String operativeSystem, Integer ramMemoray, Integer price,
+			Integer weight, Integer displaySize, Boolean hasWiFi,
+			Integer batteryCells, Boolean hasBluetooth, Boolean hasNumKeyboard) {
+		super(operativeSystem, ramMemoray, price, weight, displaySize, hasWiFi);
+		this.batteryCells = batteryCells;
+		this.hasBluetooth = hasBluetooth;
+		this.hasNumKeyboard = hasNumKeyboard;
+	}
+
 	public Integer getBatteryCells() {
 		return batteryCells;
 	}

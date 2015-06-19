@@ -6,6 +6,16 @@ public class PocketPC extends PortableComputer {
 	private Boolean supportsSimCard;
 	private Boolean supportsMicroSDcard;
 
+	public PocketPC(String operativeSystem, Integer ramMemoray, Integer price,
+			Integer weight, Integer displaySize, Boolean hasWiFi,
+			Boolean supportsTouchInterface, Boolean supportsSimCard,
+			Boolean supportsMicroSDcard) {
+		super(operativeSystem, ramMemoray, price, weight, displaySize, hasWiFi);
+		this.supportsTouchInterface = supportsTouchInterface;
+		this.supportsSimCard = supportsSimCard;
+		this.supportsMicroSDcard = supportsMicroSDcard;
+	}
+
 	public Boolean getSupportsTouchInterface() {
 		return supportsTouchInterface;
 	}

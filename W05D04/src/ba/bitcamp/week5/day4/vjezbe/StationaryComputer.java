@@ -6,6 +6,14 @@ public abstract class StationaryComputer extends PersonalComputer {
 	private Integer psu;
 	private Integer hdd;
 
+	public StationaryComputer(String operativeSystem, Integer ramMemoray,
+			Integer price, Integer cpu, Integer psu, Integer hdd) {
+		super(operativeSystem, ramMemoray, price);
+		this.cpu = cpu;
+		this.psu = psu;
+		this.hdd = hdd;
+	}
+
 	public Integer getCpu() {
 		return cpu;
 	}

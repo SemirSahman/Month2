@@ -6,6 +6,14 @@ public abstract class PortableComputer extends PersonalComputer {
 	private Integer displaySize;
 	private Boolean hasWiFi;
 
+	public PortableComputer(String operativeSystem, Integer ramMemoray,
+			Integer price, Integer weight, Integer displaySize, Boolean hasWiFi) {
+		super(operativeSystem, ramMemoray, price);
+		this.weight = weight;
+		this.displaySize = displaySize;
+		this.hasWiFi = hasWiFi;
+	}
+
 	public Integer getWeight() {
 		return weight;
 	}

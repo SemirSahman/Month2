@@ -6,6 +6,15 @@ public class DesktopComputer extends StationaryComputer {
 	private Boolean isOvercloacked;
 	private Boolean hasDVD;
 
+	public DesktopComputer(String operativeSystem, Integer ramMemoray,
+			Integer price, Integer cpu, Integer psu, Integer hdd,
+			Integer freeRamSlots, Boolean isOvercloacked, Boolean hasDVD) {
+		super(operativeSystem, ramMemoray, price, cpu, psu, hdd);
+		this.freeRamSlots = freeRamSlots;
+		this.isOvercloacked = isOvercloacked;
+		this.hasDVD = hasDVD;
+	}
+
 	public Integer getFreeRamSlots() {
 		return freeRamSlots;
 	}

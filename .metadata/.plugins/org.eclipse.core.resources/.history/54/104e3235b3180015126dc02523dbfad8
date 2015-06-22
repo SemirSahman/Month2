@@ -1,0 +1,22 @@
+package ba.bitcamp.week6.day1.predavanja;
+
+public class Foo {
+	
+	private int foones;
+
+	public Foo(int foones) {
+		super();
+		this.foones = foones;
+	}
+	
+	public int compare(Foo other){
+		if(this.foones>other.foones){
+			return 1;
+		}else if(this.foones == other.foones){
+			return 0;
+		}else{
+			return -1;
+		}
+	}
+
+}

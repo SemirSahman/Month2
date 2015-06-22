@@ -1,0 +1,24 @@
+package ba.bitcamp.week6.day1.vjezbe.task1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Line l = new Line(10);
+		
+		l.drawOnConsole();
+		System.out.println(l.getArea());
+		System.out.println(l.getCircumference());
+		
+		
+		Rectangle r = new Rectangle(4, 3);
+		
+		r.drawOnConsole();
+		System.out.println(r.getArea());
+		System.out.println(r.getCircumference());
+		
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package ba.bitcamp.week6.day1.predavanja;
+
+public interface Compare {
+
+}

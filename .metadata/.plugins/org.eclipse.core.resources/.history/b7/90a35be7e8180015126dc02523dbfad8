@@ -1,0 +1,20 @@
+package ba.bitcamp.week6.day1.vjezbe.task3;
+
+public class Clock implements WriteableClock {
+	
+	private int hours;
+	private int minutes;
+	private int seconds;
+	
+	
+	@Override
+	public void addToFile(String filename, int format) {
+		
+		if (format == MILITARY_FORMAT) {
+			String s = hours + ":" + minutes + ":" + seconds;
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+package ba.bitcamp.week6.day1.vjezbe.task1;
+
+public class Rectangle implements Shape, Drawable {
+
+	private int height;
+	private int length;
+
+	@Override
+	public void drawOnConsole() {
+		String s = "";
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < length; j++) {
+				s += "*";
+				System.out.println();
+			}
+		}
+		System.out.println(s);
+	}
+
+	@Override
+	public int getCircumference() {
+		return 2 * (height + length);
+	}
+
+	@Override
+	public int getArea() {
+		return height * length;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Rectangle other = (Rectangle) obj;
+		if (height != other.height)
+			return false;
+		if (length != other.length)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Rectangle [height=" + height + ", length=" + length + "]";
+	}
+
+	public Rectangle(int height, int length) {
+		super();
+		this.height = height;
+		this.length = length;
+	}
+
+}

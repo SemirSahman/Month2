@@ -1,0 +1,31 @@
+package ba.bitcamp.week6.day1.predavanja;
+
+public class Main {
+	
+	public static Foo getMax(Foo[] array){
+		Foo max = array[0];
+		for(int i=0;i<array.length;i++){
+			if(max.compare(array[i])==-1){
+				max=array[i];
+				
+			}
+		}
+		return max;
+	}
+	
+	public static void main(String[] args) {
+		
+		Foo[] array = new Foo[5];
+		for(int i = 0;i<array.length;i++){
+			array[i] = new Foo(i+1);
+		}
+		
+		System.out.println(getMax(array));
+	
+		
+		
+	}
+	
+	
+
+}

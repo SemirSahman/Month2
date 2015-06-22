@@ -1,0 +1,9 @@
+package ba.bitcamp.week6.day1.vjezbe;
+
+public interface Shape {
+	
+	int getCircumference();
+	
+	int getArea();
+
+}

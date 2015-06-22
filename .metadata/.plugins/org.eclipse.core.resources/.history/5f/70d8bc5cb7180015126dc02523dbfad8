@@ -1,0 +1,15 @@
+package ba.bitcamp.week6.day1.predavanja;
+
+public class Bar {
+	
+	private String name;
+
+	public Bar(String name) {
+		super();
+		this.name = name;
+	}
+	
+	
+	
+
+}

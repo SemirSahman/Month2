@@ -1,0 +1,51 @@
+package ba.bitcamp.week6.day3.vjezbe;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Task2 extends JFrame {
+	
+	private JButton button1 = new JButton("Do not exit");
+	private JButton button2 = new JButton("Exit");
+	private JLabel label = new JLabel("Choose one");
+	
+	public Task2() {
+		
+		setLayout(new BorderLayout());
+		add(button1, BorderLayout.NORTH);
+		add(button2, BorderLayout.SOUTH);
+		add(label, BorderLayout.CENTER);
+		label.setHorizontalAlignment(JLabel.CENTER);
+		
+		setSize(400, 300);
+		setTitle("Task2");
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new Task2();
+
+	}
+	
+	private class Action implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if(e.getSource() == button2){
+				System.exit(0);
+			}
+			
+		}
+		
+	}
+
+}

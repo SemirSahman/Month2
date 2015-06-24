@@ -1,0 +1,24 @@
+package ba.bitcamp.week6.day2.ObjectOrientedProgramming;
+
+public class BusNetwork extends Network {
+
+	public BusNetwork(String networkName) {
+		super(networkName);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void addComputer(Computer c) {
+		if(c instanceof Server){
+			throw new UnsupportedOperationException("Cannot connect servers on this network");
+		}
+		
+	}
+
+	@Override
+	public void removeComputer(Computer c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

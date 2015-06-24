@@ -1,0 +1,28 @@
+package ba.bitcamp.week6.day3.predavanja;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+
+public class HelloWorldGUI2 {
+
+	private static class HelloWorldDisplay extends JPanel {
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawString("Hello World!", 20, 30);
+		}
+	}
+
+	private static class ButtonHandler implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			System.exit(0);
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

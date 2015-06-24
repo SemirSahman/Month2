@@ -1,0 +1,58 @@
+package ba.bitcamp.week6.day3.vjezbe;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Task4 extends JFrame {
+
+	private JButton button = new JButton("Button");
+	private JLabel label = new JLabel("Dont press Button");
+	private int counter = 0;
+
+	public Task4() {
+
+		setLayout(new BorderLayout());
+
+		add(button, BorderLayout.SOUTH);
+		add(label, BorderLayout.CENTER);
+		label.setHorizontalAlignment(JLabel.CENTER);
+		button.addActionListener(new Action());
+
+		setSize(400, 300);
+		setTitle("Task4");
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Task4();
+	}
+
+	private class Action implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (e.getSource() == button) {
+				if (counter == 0) {
+					label.setText("I told you not to press it");
+				} else if (counter == 1) {
+					label.setText("Look its simple. Dont press it");
+				} else if (counter == 2) {
+					label.setText("You are idiot");
+				} else if (counter == 3) {
+					counter = -1;
+				}
+			}
+			counter++;
+
+		}
+
+	}
+
+}

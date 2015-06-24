@@ -1,0 +1,25 @@
+package ba.bitcamp.week6.day3.vjezbe;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+public class Task1 {
+
+	public static void main(String[] args) {
+		JLabel text = new JLabel("Hello World!");
+		JFrame task1 = new JFrame();
+		task1.add(text);
+		task1.setVisible(true);
+		task1.setTitle("Task 1");
+		task1.setSize(400, 200);
+		task1.setLocationRelativeTo(null);
+		
+		JButton button = new JButton("Hello!");
+		task1.add(button);
+		
+
+	}
+
+}

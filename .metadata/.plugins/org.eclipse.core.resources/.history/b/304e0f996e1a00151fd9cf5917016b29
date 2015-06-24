@@ -1,0 +1,22 @@
+package ba.bitcamp.week6.day3.vjezbe;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class Task1  {
+	
+
+	public Task1() {
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Task1();
+	}
+
+}

@@ -1,0 +1,12 @@
+package ba.bitcamp.week6.day2.ObjectOrientedProgramming;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Computer c = new Computer();
+		
+		System.out.println(c.getName());
+		System.out.println(c.getMacAddress());
+	}
+
+}

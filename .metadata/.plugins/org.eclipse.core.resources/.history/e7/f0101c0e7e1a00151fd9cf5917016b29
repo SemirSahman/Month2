@@ -1,0 +1,37 @@
+package ba.bitcamp.week6.day3.vjezbe;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Task5 extends JFrame {
+	
+	private JButton button1 = new JButton("<");
+	private JButton button2 = new JButton("Remove");
+	private JButton button3 = new JButton(">");
+	private JLabel label = new JLabel("_xample Sentence");
+	
+public Task5() {
+		
+		setLayout(new BorderLayout());
+		add(button1, BorderLayout.NORTH);
+		add(button2, BorderLayout.SOUTH);
+		add(label, BorderLayout.CENTER);
+		label.setHorizontalAlignment(JLabel.CENTER);
+		
+		setSize(400, 300);
+		setTitle("Task5");
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+}
+
+
+	public static void main(String[] args) {
+		new Task5();
+
+	}
+
+}

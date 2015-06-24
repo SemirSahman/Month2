@@ -1,0 +1,7 @@
+package ba.bitcamp.week6.day2.ObjectOrientedProgramming;
+
+public interface Functionable {
+	
+	boolean isFunctionable
+
+}

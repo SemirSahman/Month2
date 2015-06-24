@@ -1,0 +1,30 @@
+package ba.bitcamp.week6.day3.vjezbe;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class Task1 extends JFrame {
+	
+	public Task1(){
+		setLayout(new BorderLayout());
+		setVisible(true);
+		setSize(400, 200);
+		setTitle("Task1");
+		JFrame text = new JFrame("Hello World!");
+		add(text,BorderLayout.CENTER);
+		JButton button = new JButton("Hello!");
+		add(button,BorderLayout.SOUTH);
+		text.setLocationRelativeTo(null);
+	}
+
+	public static void main(String[] args) {
+		new Task1();
+
+	}
+
+}

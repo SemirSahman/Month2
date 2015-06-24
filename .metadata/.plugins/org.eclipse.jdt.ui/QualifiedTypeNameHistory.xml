@@ -10,4 +10,12 @@
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week6.day1.vjezbe.Rectangle"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week6.day1.vjezbe.task3.Clock"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.Computer.MACAddress"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.Computer"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.part1.Server"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.part1.Client"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.part1.Computer"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.part1.Network"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,21 @@
+package ba.bitcamp.week6.day4.Recursion.part1;
+
+public class Task1 {
+	
+	public static int print(String msg, int n){
+		if(n == 0){
+			return 1;
+		}
+		
+		System.out.println(msg);
+		return n-1;
+		
+	}
+
+	public static void main(String[] args) {
+		print("Sarajevo sampion", 5);
+		
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package ba.bitcamp.week6.day4.Recursion.part1;
+
+public class Task5 {
+	private static int idx = 0;
+
+	public static void fillArray(int[] array) {
+		if (idx == array.length) {
+			return;
+		}
+
+		array[idx] = idx + 1;
+		idx++;
+		fillArray(array);
+	}
+
+	public static void main(String[] args) {
+		int[] arr = new int[7];
+		fillArray(arr);
+
+	}
+
+}

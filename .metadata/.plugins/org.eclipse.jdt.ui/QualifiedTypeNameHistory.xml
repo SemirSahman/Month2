@@ -18,4 +18,6 @@
 <fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.part1.Network"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
+<fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

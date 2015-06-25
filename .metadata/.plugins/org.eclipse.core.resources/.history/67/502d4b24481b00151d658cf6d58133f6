@@ -1,0 +1,40 @@
+package ba.bitcamp.week6.day4.Recursion.part1;
+
+import java.util.Arrays;
+
+public class Task8 {
+
+	public static void fillArray2(int[] arr, int n, boolean right) {
+		if(right){
+			n++;
+			if(n==arr.length)
+				return;
+				arr[n] = arr[n-1]-1;
+				fillArray2(arr, n, right);
+			
+		}else{
+			n--;
+			if(n== -1)
+			return;
+			arr[n] = arr[n+1] - 1;
+			fillArray2(arr, n, false);
+			
+		}
+		
+
+	}
+	
+	public static void fillArray2(int[] arr, int n){
+		arr[n] = n;
+		fillArray2(arr, n, true);
+		fillArray2(arr, n, false);
+	}
+
+	public static void main(String[] args) {
+		int[] arr = new int[10];
+		fillArray2(arr, 3);
+		System.out.println(Arrays.toString(arr));
+
+	}
+
+}

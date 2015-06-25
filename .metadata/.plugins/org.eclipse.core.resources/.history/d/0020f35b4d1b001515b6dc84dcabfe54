@@ -1,0 +1,28 @@
+package ba.bitcamp.week6.day4.Recursion.part1;
+
+import ba.bitcamp.week4.day3.vjezbe.TextIO;
+
+public class Bonus {
+	
+	public static void print2DArray(int[][] array) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				System.out.print(array[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void main(String[] args) {
+		int[][] matrix = new int[10][10];
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				matrix[i][j] = (int)Math.random();
+			}
+
+		}
+		print2DArray(matrix);
+
+	}
+
+}

@@ -4,7 +4,7 @@ public class Bonus {
 
 
 	public static void openField(int i, int j, int[][] arr){
-		if(i<0 || j<0 || i>=arr.length || j>=arr.length){
+		if(i<0 || j<0 || i>arr.length || j>arr.length){
 			return;
 		}
 		

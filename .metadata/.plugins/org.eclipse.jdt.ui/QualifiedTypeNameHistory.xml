@@ -20,4 +20,15 @@
 <fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
 <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.awt.GridLayout"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicTabbedPaneUI.MouseHandler"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.predavanje.PaintPanel"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.predavanje.PaintPanel.MouseHandler"/>
 </qualifiedTypeNameHistroy>

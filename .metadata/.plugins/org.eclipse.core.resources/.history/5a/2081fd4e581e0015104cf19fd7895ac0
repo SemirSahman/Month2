@@ -1,0 +1,17 @@
+package ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.vjezbe;
+
+import javax.swing.JFrame;
+
+public class Task1 extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8388386491458700544L;
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

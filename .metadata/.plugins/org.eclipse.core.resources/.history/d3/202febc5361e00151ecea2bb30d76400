@@ -1,0 +1,47 @@
+package ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.predavanje;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class DrawPanel extends JPanel {
+
+	private Color backgroundColor = Color.RED;
+
+	public DrawPanel(int height, int width) {
+		setSize(width, height);
+		JButton blue = new JButton("Blue");
+
+		blue.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				backgroundColor = Color.BLUE;
+			}
+
+		});
+		
+		add(blue);
+
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		setBackground(backgroundColor);
+		g.fillOval(20, 20, 10, 10);
+
+	}
+
+	public void drawSquare() {
+		Graphics g = super.getGraphics();
+
+		g.fillRect(50, 50, 100, 100);
+		repaint();
+	}
+
+}

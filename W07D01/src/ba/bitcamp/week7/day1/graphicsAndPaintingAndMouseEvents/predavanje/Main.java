@@ -1,0 +1,35 @@
+package ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.predavanje;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
+public class Main {
+
+	public static void main(String[] args) {
+		/*
+		 * DrawPanel
+		JFrame window = new JFrame("Out little program");
+		DrawPanel dp = new DrawPanel(500,500);
+		
+		window.add(dp);
+		
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setSize(500, 500);
+		window.setVisible(true);
+
+		dp.drawSquare();
+		*/
+		JFrame window = new JFrame("Out little program");
+		PaintPanel pp = new PaintPanel(500, 500);
+		
+		window.add(pp);
+		
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setSize(500, 500);
+		window.setVisible(true);
+		
+		
+	}
+
+}

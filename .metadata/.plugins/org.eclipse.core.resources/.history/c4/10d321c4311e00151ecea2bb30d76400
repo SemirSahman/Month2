@@ -1,0 +1,24 @@
+package ba.bitcamp.week7.day1.graphicsAndPainting.predavanje;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		JFrame window = new JFrame("Out little program");
+		DrawPanel dp = new DrawPanel(500,500);
+		
+		
+		dp.setBackground(Color.RED);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setSize(500, 500);
+		window.setVisible(true);
+
+		window.add(dp);
+		dp.drawSquare();
+	}
+
+}

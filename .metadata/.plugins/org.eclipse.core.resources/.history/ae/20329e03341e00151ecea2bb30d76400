@@ -1,0 +1,31 @@
+package ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.predavanje;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class DrawPanel extends JPanel {
+
+	public DrawPanel(int height, int width) {
+		setSize(width, height);
+
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		Color bc = new Color(175, 222, 221);
+		setBackground(bc);
+		g.fillOval(20, 20, 10, 10);
+
+	}
+
+	public void drawSquare() {
+		Graphics g = super.getGraphics();
+
+		g.fillRect(50, 50, 100, 100);
+		repaint();
+	}
+
+}

@@ -1,0 +1,68 @@
+package ba.bitcamp.week7.day2.TimersKeyEventsAndStateMachines.vjezbe;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Task3 extends JFrame {
+
+	private static final long serialVersionUID = 7846851375170421023L;
+	
+	private MyPanel panel = new MyPanel();
+	private int size = 60;
+	private int idx = 10;
+	
+	public Task3() {
+		add(panel);
+		
+		Timer t = new Timer(100, new Action());
+		t.start();
+		
+		setTitle("Timers example");
+		setSize(800, 800);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	
+	private class MyPanel extends JPanel {
+		private static final long serialVersionUID = 8281156269736697513L;
+		
+		@Override
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			
+			int red = (int) (Math.random() * 256);
+			int green = (int) (Math.random() * 256);
+			int blue = (int) (Math.random() * 256);
+			
+			g.setColor(new Color(red, green, blue));
+			g.fillRect(idx, idx, size, size);
+		}
+	}
+	
+	private class Action implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if(idx == getX() || idx == getY()){
+				idx-=5;
+				panel.repaint();
+			}else if(idx > 0 && idx <getX() )
+			idx+=5;
+			panel.repaint();
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		new Task3();
+
+	}
+
+}

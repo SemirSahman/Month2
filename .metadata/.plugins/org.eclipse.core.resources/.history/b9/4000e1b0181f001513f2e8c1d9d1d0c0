@@ -1,0 +1,22 @@
+package ba.bitcamp.week7.day2.TimersKeyEventsAndStateMachines.predavanje;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class RacingGame extends JPanel {
+
+	private static final long serialVersionUID = -6621801401485315991L;
+
+	public static void main(String[] args) {
+		RacingGame racingGame = new RacingGame();
+		JFrame window = new JFrame("Racing Game");
+		window.setSize(800, 600);
+		window.setLocation(50, 50);
+		window.setResizable(false);
+		window.setContentPane(racingGame);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setVisible(true);
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package ba.bitcamp.week7.day2.TimersKeyEventsAndStateMachines.vjezbe;
+
+import javax.swing.JFrame;
+
+public class Task5 extends JFrame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -73540796970677896L;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

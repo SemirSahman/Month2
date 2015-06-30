@@ -1,0 +1,17 @@
+package ba.bitcamp.week7.day2.TimersKeyEventsAndStateMachines.predavanje;
+
+import javax.swing.JPanel;
+
+public class RacingGame extends JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6621801401485315991L;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

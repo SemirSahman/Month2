@@ -1,0 +1,8 @@
+package ba.bitcamp.week7.day3.preddavanja;
+
+import javax.swing.JPanel;
+
+public class ColorPicker extends JPanel {
+
+
+}

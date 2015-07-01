@@ -1,0 +1,57 @@
+package ba.bitcamp.week7.day3.preddavanja;
+
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+
+public class ColorPicker extends JPanel {
+
+	private static final long serialVersionUID = 7715737420901333515L;
+
+	private int red;
+	private int green;
+	private int blue;
+
+	public ColorPicker(int width, int height) {
+		JButton click = new JButton("Click me");
+		click.setPreferredSize(new Dimension(width, height / 2));
+
+		int sliderHeight = (height / 6);
+		Dimension sliderDimension = new Dimension(width, sliderHeight);
+
+		JSlider redSlider = new JSlider(0, 255);
+		initSlider(redSlider, "Red", sliderDimension);
+
+		JSlider greenSlider = new JSlider(0, 255);
+		initSlider(greenSlider, "Green", sliderDimension);
+
+		JSlider blueSlider = new JSlider(0, 255);
+		initSlider(blueSlider, "Blue", sliderDimension);
+
+		add(click);
+		add(redSlider);
+		add(greenSlider);
+		add(blueSlider);
+
+	}
+
+	private void initSlider(JSlider slider, String name, Dimension d) {
+		slider.setName(name);
+		slider.setPreferredSize(d);
+
+	}
+
+	public static void main(String[] args) {
+		JFrame window = new JFrame("Picker");
+
+		ColorPicker cp = new ColorPicker(500, 500);
+		window.add(cp);
+
+		window.setSize(500, 500);
+		window.setVisible(true);
+	}
+
+}

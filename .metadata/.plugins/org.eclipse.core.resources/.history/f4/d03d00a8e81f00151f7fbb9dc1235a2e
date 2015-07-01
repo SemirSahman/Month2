@@ -1,0 +1,44 @@
+package ba.bitcamp.week7.day3.vjezbe;
+
+import javax.swing.JFrame;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+public class Task1 extends JFrame {
+
+	private static final long serialVersionUID = -5685463051158765104L;
+	private int fontSize;
+	
+private JSlider slider = new JSlider(0, 100, 0);
+	
+	public Task1() {
+		add(slider);
+		slider.addChangeListener(new Change());
+		slider.setMinorTickSpacing(10);
+		slider.setMajorTickSpacing(10);
+		slider.setPaintTicks(true);
+		slider.setPaintLabels(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("JSlider example");
+		setSize(400, 300);
+		setLocationRelativeTo(null);
+		setVisible(true);
+	}
+	
+	private class Change implements ChangeListener {
+
+		@Override
+		public void stateChanged(ChangeEvent e) {
+			fontSize = slider.getValue();
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		new Task1();
+
+	}
+
+}

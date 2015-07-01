@@ -1,0 +1,17 @@
+package ba.bitcamp.week7.day3;
+
+import javax.swing.JFrame;
+
+public class Main extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8868951357185584108L;
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

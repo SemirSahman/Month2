@@ -1,0 +1,96 @@
+package ba.bitcamp.week7.day3.preddavanja;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Main extends JFrame {
+
+	private static final long serialVersionUID = 8868951357185584108L;
+	
+	JPanel container = new JPanel();
+	JLabel nameLabel = new JLabel("Name");
+	JLabel emailLabel = new JLabel("Email");
+	
+	String s = "";
+	
+	JTextField nameField = new JTextField(30);
+	JTextField emailField = new JTextField(30);
+	
+	JTextArea terms = new JTextArea(10, 30);
+	
+	JCheckBox cb = new JCheckBox("I accept the terms and conditions");
+	
+	JButton submit = new JButton("Submit");
+	
+	public Main(){
+		nameLabel.setForeground(Color.BLUE);
+		nameLabel.setFont(new Font("Serif" , Font.ITALIC, 24));
+		
+		
+		submit.setEnabled(true);
+		submit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "You did not accept terms and conditions");
+				nameField.setText(s);
+				emailField.setText(s);
+				
+			}
+		});
+		
+		cb.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JCheckBox cb = (JCheckBox)e.getSource();
+		
+				String name = nameField.getText();
+				String email = emailField.getText();
+				System.out.println("Name: " + name + " Email: " + email);
+				
+			}
+			
+		});
+		
+		terms.setText("Djafte kurafte");
+		terms.setLineWrap(true);
+		terms.setEditable(false);
+		
+		container.add(nameLabel);
+		container.add(nameField);
+		container.add(emailLabel);
+		container.add(emailField);
+		container.add(terms);
+		container.add(cb);
+		container.add(submit);
+		
+		add(container);
+		
+
+		setTitle("Main");
+		setSize(450, 600);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Main();
+
+	}
+
+}

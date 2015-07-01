@@ -1,0 +1,31 @@
+package ba.bitcamp.week7.day3.vjezbe;
+
+import javax.swing.JOptionPane;
+
+public class Task4 {
+
+	private static final long serialVersionUID = -8784485429337308942L;
+
+	public static void main(String[] args) {
+		int sum = 0;
+		int a;
+		a = Integer.parseInt(JOptionPane.showInputDialog("Enter a number"));
+		sum += a;
+
+		int choice = JOptionPane.showConfirmDialog(null,
+				"Do you want to enter another number ?");
+		while (choice == JOptionPane.YES_OPTION) {
+			if (choice == JOptionPane.YES_OPTION) {
+				a = Integer.parseInt(JOptionPane
+						.showInputDialog("Enter a number"));
+				sum += a;
+			} else if (choice == JOptionPane.NO_OPTION) {
+				JOptionPane.showMessageDialog(null, "Result: " + sum);
+			} else if (choice == JOptionPane.CANCEL_OPTION) {
+				JOptionPane.showMessageDialog(null, "Okay, you canceled.");
+			}
+			choice = JOptionPane.showConfirmDialog(null,
+					"Do you want to enter another number ?");
+		}
+	}
+}

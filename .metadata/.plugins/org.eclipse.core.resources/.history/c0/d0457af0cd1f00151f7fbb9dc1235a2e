@@ -1,0 +1,13 @@
+package ba.bitcamp.week7.day3.preddavanja;
+
+import javax.swing.JPanel;
+
+public class ColorPicker extends JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7715737420901333515L;
+
+
+}

@@ -1,0 +1,24 @@
+package ba.bitcamp.week7.day3;
+
+import javax.swing.JFrame;
+
+public class Main extends JFrame {
+
+	private static final long serialVersionUID = 8868951357185584108L;
+	
+	public Main(){
+		
+
+		setTitle("Main");
+		setSize(400, 300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Main();
+
+	}
+
+}

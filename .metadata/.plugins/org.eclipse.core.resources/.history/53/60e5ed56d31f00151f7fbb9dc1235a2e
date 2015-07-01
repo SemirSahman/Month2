@@ -1,0 +1,82 @@
+package ba.bitcamp.week7.day3.preddavanja;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+
+public class ColorPicker extends JPanel {
+
+	private static final long serialVersionUID = 7715737420901333515L;
+
+	private int red;
+	private int green;
+	private int blue;
+	private JButton click;
+
+	public ColorPicker(int width, int height) {
+		click.setFont(new Font("Serif", Font.BOLD, 24));
+		click = new JButton("Click me");
+		click.setPreferredSize(new Dimension(width, height / 2));
+		click.setOpaque(true);
+		click.setBorderPainted(false);
+		updateButton();
+
+		int sliderHeight = (height / 7);
+		Dimension sliderDimension = new Dimension(width - 50, sliderHeight);
+
+		JSlider redSlider = new JSlider(0, 255);
+		initSlider(redSlider, "Red", sliderDimension);
+
+		JSlider greenSlider = new JSlider(0, 255);
+		initSlider(greenSlider, "Green", sliderDimension);
+
+		JSlider blueSlider = new JSlider(0, 255);
+		initSlider(blueSlider, "Blue", sliderDimension);
+
+		JLabel redLabel = new JLabel("Red");
+		JLabel greenLabel = new JLabel("Green");
+		JLabel blueLabel = new JLabel("Blue");
+
+		add(click);
+
+		add(redLabel);
+		add(redSlider);
+
+		add(greenLabel);
+		add(greenSlider);
+
+		add(blueLabel);
+		add(blueSlider);
+
+	}
+
+	private void initSlider(JSlider slider, String name, Dimension d) {
+		slider.setName(name);
+		slider.setPreferredSize(d);
+		slider.setValue(0);
+
+	}
+
+	private void updateButton() {
+		click.setBackground(new Color(red, green, blue));
+		click.setForeground(new Color(255 - red, 255 - green, 255 - blue));
+
+	}
+
+	public static void main(String[] args) {
+		JFrame window = new JFrame("Picker");
+
+		ColorPicker cp = new ColorPicker(500, 500);
+		window.add(cp);
+
+		window.setSize(500, 500);
+		window.setVisible(true);
+	}
+
+}

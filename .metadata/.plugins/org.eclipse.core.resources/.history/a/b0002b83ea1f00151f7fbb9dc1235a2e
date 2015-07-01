@@ -1,0 +1,12 @@
+package ba.bitcamp.week7.day3.vjezbe;
+
+import javax.swing.JFrame;
+
+public class Task2 extends JFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

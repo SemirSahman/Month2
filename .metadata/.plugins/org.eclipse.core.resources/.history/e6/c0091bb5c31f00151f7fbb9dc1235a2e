@@ -1,0 +1,49 @@
+package ba.bitcamp.week7.day3;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Main extends JFrame {
+
+	private static final long serialVersionUID = 8868951357185584108L;
+	
+	JPanel container = new JPanel();
+	JLabel nameLabel = new JLabel("Name");
+	JLabel emailLabel = new JLabel("Email");
+	JTextField nameField = new JTextField(30);
+	JTextField emailField = new JTextField(30);
+	
+	JTextArea terms = new JTextArea();
+	
+	public Main(){
+		nameLabel.setForeground(Color.BLUE);
+		nameLabel.setFont(new Font("Serif" , Font.ITALIC, 24));
+		
+		container.add(nameLabel);
+		container.add(nameField);
+		container.add(emailLabel);
+		container.add(emailField);
+		container.add(terms);
+		
+		add(container);
+		
+
+		setTitle("Main");
+		setSize(800, 600);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Main();
+
+	}
+
+}

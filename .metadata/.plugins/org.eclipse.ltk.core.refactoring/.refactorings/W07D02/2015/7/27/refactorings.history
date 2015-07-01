@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Task7.java&apos; to &apos;W07D03/src/ba.bitcamp.week7.day3.vjezbe&apos;&#x0A;- Original project: &apos;W07D02&apos;&#x0A;- Destination element: &apos;W07D03/src/ba.bitcamp.week7.day3.vjezbe&apos;&#x0A;- Original element: &apos;ba.bitcamp.week7.day2.TimersKeyEventsAndStateMachines.vjezbe.Task7.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=W07D03/src&lt;ba.bitcamp.week7.day3.vjezbe" element1="/src&lt;ba.bitcamp.week7.day2.TimersKeyEventsAndStateMachines.vjezbe{Task7.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1435764210676" units="1" version="1.0"/>
+</session>

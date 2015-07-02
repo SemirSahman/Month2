@@ -1,0 +1,14 @@
+package ba.bitcamp.week7.day4.vjezbe;
+
+import javax.swing.JFrame;
+
+public class Task3 extends JFrame {
+
+	private static final long serialVersionUID = 8087731894511928682L;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

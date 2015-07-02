@@ -1,0 +1,17 @@
+package ba.bitcamp.week7.day4.vjezbe;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Task1 extends JFrame {
+
+	private static final long serialVersionUID = 1092714763630927752L;
+	JPanel panel1 = new JPanel();
+	JPanel panel2 = new JPanel();
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

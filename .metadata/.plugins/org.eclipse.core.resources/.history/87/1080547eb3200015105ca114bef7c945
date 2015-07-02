@@ -1,0 +1,50 @@
+package ba.bitcamp.week7.day4.vjezbe;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class Task1 extends JFrame {
+
+	private static final long serialVersionUID = 1092714763630927752L;
+	JPanel panel1 = new JPanel();
+	JPanel panel2 = new JPanel();
+	JLabel label1 = new JLabel("Label 1");
+	JLabel label2 = new JLabel("Label 2");
+	JTextArea area = new JTextArea();
+	
+	public Task1(){
+		setLayout(new BorderLayout());
+		add(panel1, BorderLayout.WEST);
+		add(panel2, BorderLayout.EAST);
+		panel1.setLayout(new BorderLayout());
+		panel2.setLayout(new GridLayout(3,3));
+		panel1.add(label2, BorderLayout.CENTER);
+		panel1.add(label1, BorderLayout.SOUTH);
+		label2.setLayout(new BorderLayout());
+		label2.add(area, BorderLayout.CENTER);
+		
+		for(int i = 1; i<=9;i++){
+			panel2.add(new JButton(i + ""));
+		}
+		
+		
+		setTitle("Frame1");
+		setLocationRelativeTo(null);
+		setSize(1000, 1000);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+
+	public static void main(String[] args) {
+		new Task1();
+
+	}
+
+}

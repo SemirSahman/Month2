@@ -18,7 +18,6 @@
 <fullyQualifiedTypeName name="ba.bitcamp.week6.day2.ObjectOrientedProgramming.part1.Network"/>
 <fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
 <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicTabbedPaneUI.MouseHandler"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.predavanje.PaintPanel"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week7.day1.graphicsAndPaintingAndMouseEvents.predavanje.PaintPanel.MouseHandler"/>
@@ -39,7 +38,6 @@
 <fullyQualifiedTypeName name="javax.swing.JTextField"/>
 <fullyQualifiedTypeName name="javax.swing.Timer"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="javax.swing.JLabel"/>
 <fullyQualifiedTypeName name="javax.swing.JSlider"/>
 <fullyQualifiedTypeName name="javax.swing.event.ChangeListener"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
@@ -54,4 +52,8 @@
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week7.day4.snake.Point"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week8.day1.ArrayDetails.OOPWithReach"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

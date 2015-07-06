@@ -1,0 +1,21 @@
+package ba.bitcamp.week8.day1.ArrayDetails;
+
+public class Repetitions {
+	
+	public static void numOfRepetitions(int num, int...arr){
+		int counter = 0;
+		for(int j : arr){
+			if(j == num){
+				counter++;
+			}
+		}
+		System.out.println("Number of repetitions: " + counter);
+	}
+
+	public static void main(String[] args) {
+		
+		numOfRepetitions(5, 3, 2, 5, 4, 5);
+
+	}
+
+}

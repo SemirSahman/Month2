@@ -1,0 +1,12 @@
+package ba.bitcamp.week8.day1;
+
+import javax.swing.JFrame;
+
+public class TwoJDialogs extends JFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

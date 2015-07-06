@@ -1,0 +1,45 @@
+package ba.bitcamp.week8.day1.ArrayDetails;
+
+public class OOPWithReach {
+
+	private int day;
+	private int month;
+	private int year;
+
+	public OOPWithReach() {
+		super();
+		this.day = 1;
+		this.month = 1;
+		this.year = 2000;
+	}
+
+	public OOPWithReach(int day, int month, int year) {
+		super();
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "OOPWithReach [day=" + day + ", month=" + month + ", year="
+				+ year + "]";
+	}
+
+	public static void main(String[] args) {
+
+		OOPWithReach[] dates = { new OOPWithReach(),
+				new OOPWithReach(25, 12, 2015), new OOPWithReach(1, 11, 1994),
+				new OOPWithReach(30, 9, 2005), new OOPWithReach() };
+		
+		for(OOPWithReach i : dates){
+			
+			System.out.println(i.toString());
+			
+		}
+
+	}
+
+}

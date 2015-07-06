@@ -1,0 +1,10 @@
+package ba.bitcamp.week8.day1;
+
+public class IsAnEmailAvailable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

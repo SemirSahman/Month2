@@ -1,0 +1,61 @@
+import java.util.Arrays;
+
+public class DynamicDouble {
+	private double myArray[];
+	private int count;
+
+	public DynamicDouble(int n, double x) {
+		super();
+		this.myArray = new double[n];
+		this.count = n;
+		for (int i = 0; i < n; i++) {
+			this.myArray[i] = x;
+		}
+	}
+
+	public DynamicDouble(int n) {
+		this(n, 0.0);
+		this.count = 0;
+	}
+
+	public DynamicDouble() {
+		this(8);
+	}
+
+	public void addElement(double[] xs) {
+		double[] tmp = myArray;
+		myArray = new double[myArray.length + xs.length];
+
+		for (int i = 0; i < tmp.length; i++) {
+			myArray[i] = tmp[i];
+		}
+
+		for (int i = 0; i < xs.length; i++) {
+			myArray[tmp.length + i] = xs[i];
+		}
+
+		count = myArray.length;
+	}
+
+	public double size() {
+		return count;
+	}
+
+	public double totalSize() {
+		return myArray.length;
+	}
+
+	@Override
+	public String toString() {
+		return "DynamicDouble [size()=" + size() + ", totalSize()="
+				+ totalSize() + "]";
+	}
+
+	public static void main(String[] args) {
+		
+		double[] myArray = {1,2,3,4,5,6,7};
+		myArray.toString();
+
+	}
+
+}

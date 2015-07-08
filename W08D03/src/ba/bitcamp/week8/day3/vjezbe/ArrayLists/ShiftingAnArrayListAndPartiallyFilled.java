@@ -1,0 +1,39 @@
+package ba.bitcamp.week8.day3.vjezbe.ArrayLists;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ShiftingAnArrayListAndPartiallyFilled {
+	
+	public static void shiftArrayList(ArrayList<Character>c){
+		char tmp = c.get(0);
+		for (int i = c.size() - 1; i > 0; i--) {
+			c.set(i, c.get(i-1));
+		}
+		c.set(0, tmp);
+
+		System.out.println(c);
+	}
+	
+	public static void clearArrayList(ArrayList<String>s){
+		ArrayList<String> temp = new ArrayList<String>();
+		for(int i = 0;i<s.size();i++){
+			if(s.get(i)!=(null)){
+				temp.add(s.get(i));
+			}
+		}
+		
+		System.out.println(temp);
+	}
+	
+	public static void main(String[] args) {
+		ArrayList<Character> list = new ArrayList<Character>();
+		list.addAll(Arrays.asList('A', 'B', 'C', 'D'));
+		shiftArrayList(list);
+		
+		ArrayList<String> list2 = new ArrayList<String>();
+		list2.addAll(Arrays.asList(null,"Sarajvo","je", null, "sampion"));
+		clearArrayList(list2);
+	}
+
+}

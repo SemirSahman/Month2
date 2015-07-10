@@ -122,7 +122,7 @@ public class Company {
 
 	public boolean areEmployeeSortedById() {
 		boolean isSorted = false;
-		for (int i = 0; i < employees.size()-1; i++) {
+		for (int i = 0; i < employees.size() - 1; i++) {
 			if (employees.get(i).getId() < employees.get(i + 1).getId()) {
 				isSorted = true;
 			} else {
@@ -132,28 +132,144 @@ public class Company {
 		}
 		return isSorted;
 	}
-	
-	public void getEmployee(int id){
-		
-		 int low = 0;
-         int high = employees.size() - 1;
-          
-         while(high >= low) {
-             int middle = (low + high) / 2;
-             if(employees.get(middle).getId() == id) {
-                 System.out.println(employees.get(middle));
-             }
-             if(employees.get(middle).getId() < id) {
-                 low = middle + 1;
-             }
-             if(employees.get(middle).getId() > id) {
-                 high = middle - 1;
-             }
-        }
-         
-         System.out.println("There is not employee with that ID number");
-        
-		
+
+	public void getEmployee(int id) {
+
+		int low = 0;
+		int high = employees.size() - 1;
+
+		while (high >= low) {
+			int middle = (low + high) / 2;
+			if (employees.get(middle).getId() == id) {
+				System.out.println(employees.get(middle));
+			}
+			if (employees.get(middle).getId() < id) {
+				low = middle + 1;
+			}
+			if (employees.get(middle).getId() > id) {
+				high = middle - 1;
+			}
+		}
+
+		System.out.println("There is not employee with that ID number");
+
+	}
+
+	public ArrayList<Employee> getEmployeeList() {
+
+		return employees;
+
+	}
+
+	public void addEmployee(Employee... e) {
+
+		for (int i = 0; i < e.length; i++) {
+			if (!employees.contains(e[i])) {
+				employees.add(e[i]);
+			} else {
+				System.out.println("Employee is already part of your company");
+			}
+		}
+
+	}
+
+	public void addEmployee2(Employee[] e) {
+		for (int i = 0; i < e.length; i++) {
+			if (!employees.contains(e[i])) {
+				employees.add(e[i]);
+			} else {
+				System.out
+						.println("Employees are already part of your company");
+			}
+		}
+
+	}
+
+	public void addEmployee3(ArrayList<Employee> e) {
+
+		for (int i = 0; i < e.size(); i++) {
+			if (!employees.contains(e.get(i))) {
+				employees.add(e.get(i));
+			} else {
+				System.out
+						.println("Employees are already part of your company");
+			}
+		}
+
+	}
+
+	public int indexOfEmployee(Employee e) {
+		if (employees.contains(e)) {
+			return employees.indexOf(e);
+		} else {
+			return -1;
+		}
+	}
+
+	public void removeEmployee(int idx) {
+
+		for (int i = 0; i < employees.size(); i++) {
+			if (employees.indexOf(i) == idx) {
+				employees.remove(idx);
+			} else {
+				System.out
+						.println("There is no employee on that index in your company");
+			}
+		}
+
+	}
+
+	public void removeEmployee(Integer id) {
+
+		for (int i = 0; i < employees.size(); i++) {
+			if (employees.indexOf(i) == id) {
+				employees.remove(id);
+			} else {
+				System.out
+						.println("There is no employee on that index in your company");
+			}
+		}
+
+	}
+
+	public void sortByName() {
+		for (int i = 0; i < employees.size() - 1; i++) {
+			for (int j = employees.size() - 2; j >= 0; j--) {
+				if (employees.get(j).getName().charAt(0) > (employees
+						.get(i + 1).getName().charAt(0))) {
+					Employee temp = employees.get(j);
+					employees.set(j, employees.get(j + 1));
+					employees.set(j + 1, temp);
+
+				}
+
+			}
+
+		}
+	}
+
+	public Employee[] getEmployeeArray(ArrayList<Employee> e) {
+
+		Employee[] empl = new Employee[e.size()];
+
+		for (int i = 0; i < empl.length; i++) {
+			empl[i] = e.get(i);
+		}
+
+		return empl;
+
+	}
+
+	public ArrayList<String> getNameList(ArrayList<Employee> e) {
+
+		ArrayList<String> names = new ArrayList<String>();
+
+		for (int i = 0; i < e.size(); i++) {
+			names.set(i, employees.get(i).getName());
+		}
+
+		return names;
+
 	}
 
 }

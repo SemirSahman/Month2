@@ -1,0 +1,102 @@
+package ba.bitcamp.week9.day1.vjezbe;
+
+public class LinkedListSong {
+
+	private Node start;
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LinkedListSong other = (LinkedListSong) obj;
+		if (start == null) {
+			if (other.start != null)
+				return false;
+		} else if (!start.equals(other.start))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "LinkedListSong [start=" + start + "]";
+	}
+
+	public LinkedListSong() {
+		start = null;
+	}
+
+	public LinkedListSong(Song[] s) {
+
+	}
+
+	public void add(Song s) {
+		if (start == null) {
+			start = new Node(s);
+		} else {
+			Node last = getLastNode();
+			last.setNextNode(new Node(s));
+		}
+	}
+
+	private Node getLastNode() {
+		if (start == null) {
+			return null;
+		}
+
+		Node temp = start;
+		while (temp.getNextNode() != null) {
+			temp = temp.getNextNode();
+		}
+
+		return temp;
+	}
+
+	public Node getPreviousNode(Node n) {
+		if (n == start) {
+			return null;
+		}
+
+		Node temp = start;
+		while (temp.getNextNode() != n) {
+			temp = temp.getNextNode();
+		}
+
+		return temp;
+	}
+
+	private class Node {
+		private Song value;
+		private Node next;
+
+		public Node(Song value) {
+			this.value = value;
+		}
+
+		public Song getValue() {
+			return value;
+		}
+
+		public Node getNextNode() {
+			return next;
+		}
+
+		public void setNextNode(Node next) {
+			this.next = next;
+		}
+
+		@Override
+		public String toString() {
+			if (next == null) {
+				return value + "";
+			}
+
+			return value + " " + next.toString();
+		}
+	}
+
+}

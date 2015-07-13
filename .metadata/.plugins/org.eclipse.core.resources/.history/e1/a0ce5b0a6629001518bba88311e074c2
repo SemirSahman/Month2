@@ -1,0 +1,14 @@
+package ba.bitcamp.week9.day1.vjezbe;
+
+public class Song {
+	
+	private String name;
+	private String artist;
+	private int year;
+	private String genre;
+	
+	private static final int POP = 0;
+	private static final int ROCK = 1;
+	private static final int TECHNO = 2;
+
+}

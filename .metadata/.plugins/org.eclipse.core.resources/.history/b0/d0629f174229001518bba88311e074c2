@@ -1,0 +1,15 @@
+package ba.bitcamp.week9.day1.predavanja;
+
+public class Place {
+
+	private String name;
+
+	public Place(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String toString() {
+		return name;
+	}
+}

@@ -1,0 +1,17 @@
+package ba.bitcamp.week9.day1.predavanja;
+
+public class Trip {
+
+	private Place from;
+	private Place to;
+
+	public Trip(Place from, Place to) {
+		super();
+		this.from = from;
+		this.to = to;
+	}
+
+	public String toString() {
+		return "Trip from " + from + " to " + to;
+	}
+}

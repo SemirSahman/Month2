@@ -1,0 +1,33 @@
+package ba.bitcamp.week9.day1.vjezbe;
+
+import java.util.Arrays;
+
+public class ArrayListSong {
+
+	Song[] songs;
+
+	public ArrayListSong() {
+		super();
+		this.songs = new Song[0];
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ArrayListSong other = (ArrayListSong) obj;
+		if (!Arrays.equals(songs, other.songs))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "ArrayListSong [songs=" + Arrays.toString(songs) + "]";
+	}
+
+}

@@ -1,0 +1,19 @@
+package ba.bitcamp.SearchingAndSorting.vjezbe;
+
+public class Task1 {
+
+	public static void main(String[] args) {
+
+		int[][] arr = new int[4][5];
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = (int) (Math.random() * 10);
+				System.out.print(arr);
+			}
+			System.out.println();
+		}
+
+	}
+
+}

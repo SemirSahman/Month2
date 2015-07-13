@@ -1,0 +1,15 @@
+package ba.bitcamp.week9.day1.predavanja;
+
+public class Trip {
+
+	private Place start;
+
+	public Trip(Place start) {
+		super();
+		this.start = start;
+	}
+
+	public String toString() {
+		return "Trip from " + start + " to " + start;
+	}
+}

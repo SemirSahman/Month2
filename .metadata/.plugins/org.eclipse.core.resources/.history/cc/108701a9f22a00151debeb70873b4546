@@ -1,0 +1,34 @@
+package ba.bitcamp.week9.day3;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class LinkedListIterator {
+
+	public static void main(String[] args) {
+		LinkedList<Integer> list = new LinkedList<>();
+		
+		for(int i = 0 ; i<100000;i++){
+			list.add((int) (Math.random()*100+1));
+		}
+		
+		System.out.println(list);
+		
+		Iterator<Integer> it = list.iterator();
+		while(it.hasNext()){
+			
+			int temp = it.next();
+			Scanner in = new Scanner(System.in);
+			int temp2 = in.nextInt();
+			
+			if(temp % temp2 == 0){
+				list.remove(temp);
+			}
+			
+		}
+		System.out.println(list);
+
+	}
+
+}

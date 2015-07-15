@@ -1,0 +1,10 @@
+package ba.bitcamp.week9.day3;
+
+public class Iterator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

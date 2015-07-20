@@ -1,0 +1,14 @@
+package ba.bitcamp.week10.day01;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		VideoGame game1 = new VideoGame("The Witcher 3", 2015, "Alfa", 23.5, "RPG", "Neki poljski", 100000);
+		Editor editor1 = new Editor("Editor1", 2012, "Alfa", 7.5, Editor.VIDEO, true);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package ba.bitcamp.week10.day01;
+
+public class VideoGame {
+	
+	private String genre;
+	private String studio;
+	private int gamesSold;
+	public VideoGame(String genre, String studio, int gamesSold) {
+		super();
+		this.genre = genre;
+		this.studio = studio;
+		this.gamesSold = gamesSold;
+	}
+
+}

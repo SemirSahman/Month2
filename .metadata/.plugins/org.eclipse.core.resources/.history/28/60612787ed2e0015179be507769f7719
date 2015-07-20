@@ -1,0 +1,17 @@
+package ba.bitcamp.week10.day01;
+
+public class VideoGame extends Application {
+
+	private String genre;
+	private String studio;
+	private int gamesSold;
+
+	public VideoGame(String name, int year, String version, double size,
+			String genre, String studio, int gamesSold) {
+		super(name, year, version, size);
+		this.genre = genre;
+		this.studio = studio;
+		this.gamesSold = gamesSold;
+	}
+
+}

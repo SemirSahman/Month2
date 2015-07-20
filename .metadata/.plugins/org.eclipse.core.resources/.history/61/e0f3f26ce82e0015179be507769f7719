@@ -1,0 +1,55 @@
+package ba.bitcamp.week10.day01;
+
+public class Application {
+	
+	String name;
+	int year;
+	String version;
+	double size;
+	
+	
+	
+	public Application(String name, int year, String version, double size) {
+		super();
+		this.name = name;
+		this.year = year;
+		this.version = version;
+		this.size = size;
+	}
+
+
+
+	public class Editor {
+		
+		private static final int TEXT = 0;
+		private static final int PHOTO = 1;
+		private static final int VIDEO = 2;
+		
+		private String type;
+		private boolean isFreeware;
+		public Editor(String type, boolean isFreeware) {
+			super();
+			this.type = type;
+			this.isFreeware = isFreeware;
+		}
+		
+		public class VideoGame {
+			
+			private String genre;
+			private String studio;
+			private int gamesSold;
+			public VideoGame(String genre, String studio, int gamesSold) {
+				super();
+				this.genre = genre;
+				this.studio = studio;
+				this.gamesSold = gamesSold;
+			}
+			
+			
+			
+		}
+		
+		
+	}
+
+}

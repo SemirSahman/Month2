@@ -1,0 +1,18 @@
+package ba.bitcamp.week10.day01;
+
+public class Editor {
+
+	private static final int TEXT = 0;
+	private static final int PHOTO = 1;
+	private static final int VIDEO = 2;
+
+	private String type;
+	private boolean isFreeware;
+
+	public Editor(String type, boolean isFreeware) {
+		super();
+		this.type = type;
+		this.isFreeware = isFreeware;
+	}
+
+}

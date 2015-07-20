@@ -1,0 +1,18 @@
+package ba.bitcamp.week10.day01;
+
+public class Application {
+
+	String name;
+	int year;
+	String version;
+	double size;
+
+	public Application(String name, int year, String version, double size) {
+		super();
+		this.name = name;
+		this.year = year;
+		this.version = version;
+		this.size = size;
+	}
+
+}

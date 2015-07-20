@@ -1,0 +1,5 @@
+package ba.bitcamp.week10.day01;
+
+public class MyStack<T> {
+
+}

@@ -1,0 +1,17 @@
+package ba.bitcamp.week10.day2.streams.vjezbe;
+
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+	
+	private String name;
+	private int year;
+	public Employee(String name, int year) {
+		super();
+		this.name = name;
+		this.year = year;
+	}
+	
+	
+
+}

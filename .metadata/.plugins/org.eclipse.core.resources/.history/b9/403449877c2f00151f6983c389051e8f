@@ -1,0 +1,32 @@
+package ba.bitcamp.week10.day2.streams.predavanje;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Main {
+
+	public static void printByteArray(byte[] array) {
+		for (byte b : array) {
+			System.out.println((char) b);
+		}
+	}
+
+	public static void main(String[] args) {
+
+		InputStream is = System.in;
+
+		byte[] buffer = new byte[3];
+
+		try {
+			while(is.read(buffer)>0){
+				printByteArray(buffer);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("Done");
+
+	}
+
+}

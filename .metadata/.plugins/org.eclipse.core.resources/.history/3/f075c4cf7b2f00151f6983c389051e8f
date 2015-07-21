@@ -1,0 +1,26 @@
+package ba.bitcamp.week10.day2.streams.predavanje;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		InputStream is = System.in;
+
+		byte[] buffer = new byte[3];
+
+		try {
+			is.read(buffer);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		for (byte b : buffer) {
+			System.out.println((char)b);
+		}
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package ba.bitcamp.week10.day2.streams.vjezbe;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Task2 {
+
+	public static void main(String[] args) {
+		PrintWriter pw = new PrintWriter(System.out);
+		int length = 10;
+		String s = "";
+
+		char[] arr = new char[26];
+
+		int counter = 65;
+		try {
+			do {
+
+				for (int i = 0; i < arr.length; i++) {
+					arr[i] = (char) counter;
+					counter++;
+					s += arr[i];
+				}
+
+			} while (s.length() < arr.length);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return;
+		}
+
+	}
+}

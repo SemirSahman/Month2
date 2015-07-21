@@ -1,0 +1,36 @@
+package ba.bitcamp.week10.day2.streams.predavanje;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Main {
+
+	public static void printByteArray(byte[] array) {
+		for (byte b : array) {
+			System.out.println((char) b);
+		}
+		System.out.println();
+	}
+
+	public static void main(String[] args) {
+
+		InputStream is = System.in;
+
+		byte[] buffer = new byte[3];
+
+		try {
+			int read = 0;
+			while(is.available() >0){
+				is.read(buffer);
+				System.out.println("Procitao: " + read);
+				printByteArray(buffer);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("Done");
+
+	}
+
+}

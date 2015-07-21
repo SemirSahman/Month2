@@ -1,0 +1,23 @@
+package ba.bitcamp.week10.day2.streams.predavanje;
+
+import java.io.Serializable;
+
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 2179389582472740333L;
+	
+	private String name;
+	private int age;
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + "]";
+	}
+	public User(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	
+	
+
+}

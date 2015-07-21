@@ -1,0 +1,15 @@
+package ba.bitcamp.week10.day2.streams.vjezbe;
+
+public class Employee {
+	
+	private String name;
+	private int year;
+	public Employee(String name, int year) {
+		super();
+		this.name = name;
+		this.year = year;
+	}
+	
+	
+
+}

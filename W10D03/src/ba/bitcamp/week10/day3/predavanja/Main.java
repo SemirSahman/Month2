@@ -1,0 +1,24 @@
+package ba.bitcamp.week10.day3.predavanja;
+
+import java.io.File;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		System.out.println(System.getProperty("user.home"));
+		String[] files;
+
+		File f = new File(System.getProperty("user.home"));
+		if (f.exists() == true) {
+			if (f.isDirectory() == true) {
+				files = f.list();
+				for (int i = 0; i < files.length; i++) {
+					System.out.println(files[i]);
+				}
+
+			}
+		}
+
+	}
+}

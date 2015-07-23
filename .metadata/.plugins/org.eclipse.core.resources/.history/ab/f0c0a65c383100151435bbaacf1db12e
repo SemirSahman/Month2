@@ -1,0 +1,45 @@
+package ba.bitcamp.test;
+
+import java.util.ArrayList;
+
+import ba.bitcamp.test.HistoricalArtifacts.Period;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Exhibit> exhibits = new ArrayList<Exhibit>();
+		
+		Exhibit e1 = new Exhibit(1000, "Rare exhibit", "Very rare exhibit");
+		Exhibit e2 = new Exhibit(1001, "Egypt exhibit", "Exhibit from Egypt");
+		Exhibit e3 = new Exhibit(1002, "Greece exhibit", "Exhibit from ancient Greece");
+		Exhibit e4 = new Exhibit(1003, "Babylon exhibit", "Exhibit from ancient Babylon");
+		
+		exhibits.add(e1);
+		exhibits.add(e2);
+		exhibits.add(e3);
+		exhibits.add(e4);
+		
+		System.out.println(exhibits);
+		
+		ArrayList<HistoricalArtifacts> historicalArtifacts = new ArrayList<HistoricalArtifacts>();
+		
+		HistoricalArtifacts ha1 = new HistoricalArtifacts(1010, "Tutankammons mask", "Mask from Tutankammon the Egypt pharaon", "Egypt", Period.CLASSIC);
+		HistoricalArtifacts ha2 = new HistoricalArtifacts(1011, "T-Rex leg bone", "Big leg bone from one of the most vicious predator in Jurrasic era", "Pangea", Period.CLASSIC);
+		HistoricalArtifacts ha3 = new HistoricalArtifacts(1012, "Stonehenge", "Large rock boulders sorted in strange way", "Great Britany", Period.CLASSIC);
+		HistoricalArtifacts ha4 = new HistoricalArtifacts(1013, "Charter of Ban Kulin", "Trade agreement between the Banate of Bosnia and the Republic of Ragusa", "Bosnia", Period.MEDIEVAL);
+		
+		historicalArtifacts.add(ha1);
+		historicalArtifacts.add(ha2);
+		historicalArtifacts.add(ha3);
+		historicalArtifacts.add(ha4);
+		
+		System.out.println(historicalArtifacts);
+		
+		ArrayList<WorksOfArt> worksOfArt = new ArrayList<WorksOfArt>();
+		
+		//WorkOfArt wof1 = new WorksOfArt(1020, "Mona Lisa", "Paint painted by", authorName, period)
+
+	}
+
+}

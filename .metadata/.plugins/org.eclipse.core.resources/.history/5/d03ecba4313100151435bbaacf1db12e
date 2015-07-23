@@ -1,0 +1,66 @@
+package ba.bitcamp.test;
+
+public class Employees implements Searchable {
+
+	private String name;
+	private int year;
+	private int salary;
+	private Gender gender;
+
+	public enum Gender {
+		MALE, FEMALE
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+	public Employees(String name, int year, int salary, Gender gender) {
+		super();
+		this.name = name;
+		this.year = year;
+		this.salary = salary;
+		this.gender = gender;
+	}
+
+	@Override
+	public String toString() {
+		return "Employees [name=" + name + ", year=" + year + ", salary="
+				+ salary + ", gender=" + gender + "]";
+	}
+
+	@Override
+	public boolean fiitsSearch(String s) {
+		// TODO Auto-generated method stub
+		return false;
+	};
+
+}

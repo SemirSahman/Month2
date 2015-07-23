@@ -1,0 +1,60 @@
+package ba.bitcamp.test;
+
+public class HistoricalArtifacs extends Exhibit {
+
+	private String origin;
+	private Period period;
+
+	public enum Period {
+		CLASSIC, MIDDLE_AGE, MODERN_TIME
+	}
+
+	public HistoricalArtifacs(int id, String name, String description,
+			String origin, Period period) {
+		super(id, name, description);
+		this.origin = origin;
+		this.period = period;
+	}
+
+	public String getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+
+	public Period getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(Period period) {
+		this.period = period;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		HistoricalArtifacs other = (HistoricalArtifacs) obj;
+		if (origin == null) {
+			if (other.origin != null)
+				return false;
+		} else if (!origin.equals(other.origin))
+			return false;
+		if (period != other.period)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "HistoricalArtifacs [origin=" + origin + ", period=" + period
+				+ "]";
+	};
+
+}

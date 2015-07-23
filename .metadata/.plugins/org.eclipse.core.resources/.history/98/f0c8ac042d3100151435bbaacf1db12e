@@ -1,0 +1,54 @@
+package ba.bitcamp.test;
+
+public class Employees {
+
+	private String name;
+	private int year;
+
+	public Employees(String name, int year) {
+		super();
+		this.name = name;
+		this.year = year;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employees other = (Employees) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (year != other.year)
+			return false;
+		return true;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	@Override
+	public String toString() {
+		return "Employees [name=" + name + ", year=" + year + "]";
+	}
+
+}

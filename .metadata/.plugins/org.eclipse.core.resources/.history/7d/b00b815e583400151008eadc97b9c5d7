@@ -1,0 +1,23 @@
+package ba.bitcamp.week11day01;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		try {
+			System.out.println("Application started");
+			ServerSocket server = new ServerSocket(1946);
+			System.out.println("Server Socket made");
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

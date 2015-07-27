@@ -1,0 +1,21 @@
+package ba.bitcamp.week11day01;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class URLExamples {
+
+	public static void main(String[] args) {
+		
+		URL url1 = null;
+		
+		try {
+			url1 = new URL("http://znamo.ba/wp-content/uploads/2015/05/Sarajevo-sampion2015.jpg");
+		} catch (MalformedURLException e) {
+			System.out.println("Bad URL");
+			e.printStackTrace();
+		}
+
+	}
+
+}

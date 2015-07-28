@@ -1,0 +1,48 @@
+package ba.bitcamp.week11day2;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Sockets {
+
+	public static void main(String[] args) {
+		
+		try {
+			System.out.println("Searching connection");
+			ServerSocket ss = new ServerSocket(8888);
+			Socket client = ss.accept();
+			BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+			String ip = client.getInetAddress().getHostAddress();
+			String name = ClientHashMap.getName(ip);
+			String msg = reader.readLine();
+			System.out.println("Connected");
+			
+			Socket clientZaid = new Socket("10.0.82.98", 8888);
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(clientZaid.getOutputStream()));
+			writer.write("");
+			writer.newLine();
+			writer.flush();
+			
+			
+			Socket client2 =  new Socket();
+			BufferedWriter writer2 = new BufferedWriter(new OutputStreamWriter(client2.getOutputStream()));
+			writer2.write(msg);
+			writer2.newLine();
+			writer2.flush();
+			
+			System.out.println("Connection succesfull");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+
+	}
+
+}

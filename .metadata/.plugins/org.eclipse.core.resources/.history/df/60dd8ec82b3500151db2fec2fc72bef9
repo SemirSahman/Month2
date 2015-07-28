@@ -1,0 +1,10 @@
+package ba.bitcamp.week11day2;
+
+public class Sockets {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

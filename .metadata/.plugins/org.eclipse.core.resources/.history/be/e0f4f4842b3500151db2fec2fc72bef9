@@ -1,0 +1,42 @@
+package ba.bitcamp.week11day2;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class ClientHashMap {
+
+	public static void main(String[] args) {
+		HashMap map = new HashMap<String, String>();
+		ArrayList list = new ArrayList<>();
+
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(new File(
+					"output.txt")));
+			try {
+				while (reader.ready()) {
+					String s = reader.readLine();
+					list.add(s.substring(0, s.indexOf(" ")));
+					map.put(s.substring(0, s.indexOf(" ")),
+							s.substring(s.indexOf(" ") + 1, s.length()));
+				}
+				int random = (int) (Math.random() * 26);
+				if (map.containsKey(list.get(random)) && random != 4) {
+					System.out.println(list.get(random));
+				}
+
+				System.out.println(map);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

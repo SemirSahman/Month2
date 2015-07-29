@@ -1,0 +1,28 @@
+package ba.bitcamp.week11.day3.vjezbe;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServerNormal {
+
+	public static void main(String[] args) {
+		try {
+			System.out.println("Starting Server");
+			ServerSocket server = new ServerSocket();
+			System.out.println("Server started");
+			
+			while(true){
+				Socket client = server.accept();
+				System.out.println(client.getInetAddress().getHostAddress());
+				
+				
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

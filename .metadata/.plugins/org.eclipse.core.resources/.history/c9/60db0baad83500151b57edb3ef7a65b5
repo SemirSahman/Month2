@@ -1,0 +1,44 @@
+package ba.bitcamp.week11.day3.predavanja;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+
+public class Result {
+	
+	public static void OK(BufferedWriter bw, String content) throws IOException{
+		
+		bw.write("HTTP/1.1 200 OK\n");
+		bw.write("Content-type : text/html\n");
+		bw.newLine();
+		bw.write(content);
+		
+	}
+	
+	public static void notFound(BufferedWriter bw) throws IOException{
+		
+		bw.write("HTTP/1.1 404 Not Found OK\n");
+		bw.write("Content-type : text/html\n");
+		bw.newLine();
+		bw.write("Not found");
+		
+	}
+
+	public static void serverError(BufferedWriter bw) throws IOException{
+		
+		bw.write("HTTP/1.1 500 Internal Server Error OK\n");
+		bw.write("Content-type : text/html\n");
+		bw.newLine();
+		bw.write("Not Found");
+		
+	}
+	
+	public static void response(BufferedWriter bw,String responseCode, String responseContent) throws IOException{
+		
+		bw.write(String.format("HTTP/1.1 %s \n", responseCode));
+		bw.write("content-type: text/html\n");
+		bw.newLine();
+		bw.write(responseContent);
+		bw.flush();
+		
+	}
+}

@@ -16,7 +16,7 @@ public class Client {
 
 		try {
 			System.out.println("CLIENT Application started");
-			Socket socket = new Socket("10.0.82.27", 7777);
+			Socket socket = new Socket("10.0.82.18", 5555);
 			System.out.println("CLIENT connected to localhost");
 
 			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(

@@ -1,0 +1,56 @@
+package ba.bitcamp.week11.day3.predavanja;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Main {
+
+	private static int PORT = 7321;
+
+	public static void main(String[] args) {
+
+		try {
+			ServerSocket server = new ServerSocket(PORT);
+
+			while (true) {
+				Socket client = server.accept();
+				BufferedReader br = new BufferedReader(new InputStreamReader(
+						client.getInputStream()));
+
+				String line = "";
+				String requestType = "";
+				String requestRoute = "";
+				while ((line = br.readLine()) != null) {
+					if (line.contains("GET") || line.contains("POST")) {
+						String[] parts = line.split(" ");
+						requestType = parts[0];
+						requestRoute = parts[1];
+						break;
+					}
+				}
+				
+				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+				
+				bw.write("HTTP 1.1 200 OK\n");
+				bw.newLine();
+				bw.write("Hello World\n");
+				bw.newLine();
+				bw.flush();
+				
+				client.close();
+
+			}
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

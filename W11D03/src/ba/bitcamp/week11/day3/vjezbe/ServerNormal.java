@@ -1,0 +1,66 @@
+package ba.bitcamp.week11.day3.vjezbe;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServerNormal {
+
+	public static void main(String[] args) {
+		try {
+
+			ServerSocket server = new ServerSocket(1946);
+
+			Socket client = server.accept();
+
+			System.out.println("Client connected: "
+					+ client.getInetAddress().getHostAddress());
+
+			BufferedWriter bw = new BufferedWriter(new FileWriter(new File(
+					"src/ips.txt"), true));
+
+			bw.write(client.getInetAddress().getHostAddress());
+
+			bw.newLine();
+
+			bw.flush();
+
+			File file = new File("src/output.jpg");
+
+			byte[] byteArray = new byte[(int) file.length()];
+
+			FileInputStream inputStream = new FileInputStream(file);
+
+			BufferedInputStream bufferedStream = new BufferedInputStream(
+					inputStream);
+
+			bufferedStream.read(byteArray, 0, byteArray.length);
+
+			OutputStream os = client.getOutputStream();
+
+			System.out.println("Sending: " + file + " " + byteArray.length
+					+ " bytes.");
+
+			os.write(byteArray, 0, byteArray.length);
+
+			os.flush();
+
+			System.out.println("Done !");
+
+		} catch (IOException e) {
+
+			// TODO Auto-generated catch block
+
+			e.printStackTrace();
+
+		}
+
+	}
+
+}

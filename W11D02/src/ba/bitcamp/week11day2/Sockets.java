@@ -9,6 +9,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+import ba.bitcamp.week11day2.ClientHashMap;
+
 public class Sockets {
 
 	public static void main(String[] args) {

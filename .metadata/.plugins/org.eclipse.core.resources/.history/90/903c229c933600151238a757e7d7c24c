@@ -1,0 +1,19 @@
+package ba.bitcamp.week11.day04.predavanja;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		NameThread t1 = new NameThread("Ross");
+		NameThread t2 = new NameThread("Joey");
+		NameThread t3 = new NameThread("Rachel");
+		
+		t1.start();
+		t2.start();
+		t3.start();
+		
+		System.out.println("End of main");
+		
+	}
+
+}

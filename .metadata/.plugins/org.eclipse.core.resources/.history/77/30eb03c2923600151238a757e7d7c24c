@@ -1,0 +1,39 @@
+package ba.bitcamp.week11.day04.predavanja;
+
+public class Main implements Runnable {
+
+	public static void main(String[] args) {
+		
+		Main m = new Main();
+		Thread t = new Thread(m);
+		t.start();
+		
+		try {
+			t.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		for (int i = 0; i < Integer.MAX_VALUE; i++) {
+			System.out.println("Main");
+		}
+
+	}
+
+	@Override
+	public void run() {
+		
+		System.out.println("Going to sleep");
+
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+
+	}
+
+

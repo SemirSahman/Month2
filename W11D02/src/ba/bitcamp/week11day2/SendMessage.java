@@ -28,7 +28,7 @@ public class SendMessage extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					System.out.println("CLIENT Application started");
-					Socket socket = new Socket("10.0.82.18", 8888);
+					Socket socket = new Socket("10.0.82.98", 8000);
 					System.out.println("CLIENT connected to localhost");
 
 					BufferedWriter writer = new BufferedWriter(

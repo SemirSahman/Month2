@@ -1,0 +1,9 @@
+package ba.bitcamp.week11day05.vjezbe;
+
+import javax.swing.JFrame;
+
+public class ServerGUI extends JFrame {
+
+	private static final long serialVersionUID = 8773586493267481321L;
+
+}

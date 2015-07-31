@@ -1,0 +1,15 @@
+package ba.bitcamp.week11day05.vjezbe;
+
+import javax.swing.JFrame;
+
+public class ClientGUI extends JFrame {
+
+	private static final long serialVersionUID = 7478196867372063864L;
+
+	public static void main(String[] args) {
+		
+		 
+
+	}
+
+}

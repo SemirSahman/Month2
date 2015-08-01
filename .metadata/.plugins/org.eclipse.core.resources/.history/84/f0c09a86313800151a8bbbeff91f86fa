@@ -1,0 +1,25 @@
+package ba.bitcamp.dataStructures;
+
+import java.awt.Point;
+import java.util.HashSet;
+
+public class HashSetExample {
+	
+	public static void main(String[] args) {
+		
+		HashSet<Point> set =  new HashSet<>();
+		
+//		set.add(2);
+//		set.add(1);
+//		set.add(5);
+		
+		set.add(new Point(5, 0));
+		set.add(new Point(0, 0));
+		set.add(new Point(3, 2));
+		set.add(new Point(1, 1));
+		
+		System.out.println(set);
+		
+	}
+
+}

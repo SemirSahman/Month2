@@ -1,0 +1,42 @@
+package ba.bitcamp.dataStructures;
+
+import java.awt.Point;
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSetExample {
+
+	public static void main(String[] args) {
+
+		HashSet<Point> set = new HashSet<>();
+
+		// set.add(2);
+		// set.add(1);
+		// set.add(5);
+
+		set.add(new Point(5, 0));
+		set.add(new Point(0, 0));
+		set.add(new Point(3, 2));
+		set.add(new Point(1, 1));
+		set.add(new Point(3, 3));
+		set.add(new Point(6, 2));
+		set.add(new Point(2, 6));
+		
+
+		Iterator<Point> it = set.iterator();
+		while (it.hasNext()) {
+			for (int i = 2; i < set.size() + 2; i++) {
+
+				Point p = it.next();
+				if (i % 2 == 0) {
+
+					System.out.println(p.x + " " + p.y);
+				}
+			}
+		}
+
+		System.out.println(set);
+
+	}
+
+}

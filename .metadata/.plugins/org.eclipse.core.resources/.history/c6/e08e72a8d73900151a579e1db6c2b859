@@ -1,0 +1,12 @@
+package ba.bitcamp.week12.day01.vjezbe;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+
+	}
+
+}

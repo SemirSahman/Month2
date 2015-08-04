@@ -1,0 +1,12 @@
+package ba.bitcamp.week12.day02;
+
+import javax.swing.JFrame;
+
+public class StoppingMultipleThreads extends JFrame {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

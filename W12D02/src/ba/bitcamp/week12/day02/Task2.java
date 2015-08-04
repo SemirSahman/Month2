@@ -1,0 +1,56 @@
+package ba.bitcamp.week12.day02;
+
+public class Task2 {
+
+	static int counter = 0;
+
+	public static synchronized void main(String[] args) {
+
+		for (int i = 0; i < 20; i++) {
+			startThreads();
+		}
+		System.out.println("Program finshed");
+		System.out.println(counter);
+
+	}
+
+	static class MyThread implements Runnable {
+
+		@Override
+		public void run() {
+
+			try {
+				for (int i = 1; i < 101; i++) {
+
+					counter += 10;
+
+					Thread.sleep(5);
+				}
+			} catch (InterruptedException e) {
+
+			}
+
+		}
+
+	}
+
+	public static void startThreads() {
+		Thread t1 = new Thread(new MyThread());
+		Thread t2 = new Thread(new MyThread());
+
+		t1.start();
+		t2.start();
+
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println(counter);
+		counter = 0;
+	}
+
+}

@@ -1,0 +1,59 @@
+package ba.bitcamp.week12.day02;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class StoppingMultipleThreads extends JFrame {
+
+	private static final long serialVersionUID = -5171817768072316647L;
+
+	JButton add = new JButton("Add");
+	JButton stop = new JButton("Stop");
+	JPanel panel = new JPanel();
+
+	public StoppingMultipleThreads() {
+
+		add(panel);
+		panel.add(add);
+		panel.add(stop);
+
+		setTitle("Stopping multiple threads");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(300, 200);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setVisible(true);
+
+	}
+
+	static class MyThread implements Runnable {
+
+		@Override
+		public void run() {
+
+			try {
+				System.out.println(Math.random() * 100 + 1);
+				Thread.sleep(400);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

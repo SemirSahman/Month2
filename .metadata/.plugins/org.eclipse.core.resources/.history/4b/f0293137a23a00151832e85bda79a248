@@ -1,0 +1,87 @@
+package ba.bitcamp.week12.day02;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class StoppingMultipleThreads extends JFrame {
+
+	private static final long serialVersionUID = -5171817768072316647L;
+
+	JButton add = new JButton("Add");
+	JButton stop = new JButton("Stop");
+	JPanel panel = new JPanel();
+	ArrayList<Thread> list = new ArrayList<Thread>();
+
+	public StoppingMultipleThreads() {
+
+		add(panel);
+		panel.add(add);
+		add.addActionListener(new Action());
+		panel.add(stop);
+		stop.addActionListener(new Action());
+
+		setTitle("Stopping multiple threads");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(300, 200);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setVisible(true);
+
+	}
+
+	static class MyThread implements Runnable {
+
+		@Override
+		public void run() {
+
+			try {
+				for (int i = 1; i < 101; i++) {
+
+					System.out.println(i);
+					Thread.sleep(400);
+				}
+			} catch (InterruptedException e) {
+				System.out.println("Threads killed");
+			}
+
+		}
+
+	}
+
+	public class Action implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (e.getSource() == add) {
+				Thread t = new Thread(new MyThread());
+				list.add(t);
+				t.start();
+			}
+
+			if (e.getSource() == stop) {
+
+				for (Thread t : list) {
+
+					t.interrupt();
+					System.out.println("Is Thread alive: " + t.isAlive());
+
+				}
+
+			}
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		new StoppingMultipleThreads();
+
+	}
+
+}

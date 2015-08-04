@@ -1,0 +1,13 @@
+package ba.bitcamp.week12.day02;
+
+import javax.swing.JFrame;
+
+public class BackgroundCalculations extends JFrame {
+
+	private static final long serialVersionUID = 2085671979307531007L;
+
+	public static void main(String[] args) {
+
+	}
+
+}

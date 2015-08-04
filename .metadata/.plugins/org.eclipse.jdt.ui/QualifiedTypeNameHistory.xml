@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ba.bitcamp.week9.day2.predavanja.LinkedListInts"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.Collection"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="ba.bitcamp.week10.day01.VideoGame"/>
-<fullyQualifiedTypeName name="ba.bitcamp.week10.day01.Editor"/>
-<fullyQualifiedTypeName name="ba.bitcamp.week10.day2.streams.vjezbe.Employee"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="ba.bitcamp.test.Exhibit"/>
 <fullyQualifiedTypeName name="ba.bitcamp.test.HistoricalArtifacts.Period"/>
 <fullyQualifiedTypeName name="ba.bitcamp.test.HistoricalArtifacts"/>
@@ -20,11 +9,7 @@
 <fullyQualifiedTypeName name="ba.bitcamp.test.Museum"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
-<fullyQualifiedTypeName name="javax.swing.JButton"/>
-<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week11day2.SendMessage"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week11day2.ClientHashMap"/>
@@ -33,7 +18,6 @@
 <fullyQualifiedTypeName name="ba.bitcamp.week11.day04.predavanja.NamedRunnable"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week11.day04.predavanja.PrimeCounter"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.awt.Point"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
@@ -57,7 +41,23 @@
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
 <fullyQualifiedTypeName name="java.net.Socket"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week12.day01.vjezbe.Message"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.StoppingMultipleThreads.MyThread"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.StoppingMultipleThreads.Action"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.StoppingMultipleThreads"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.Task2.MyThread"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.RenderingAnImage.MyPanel"/>
+<fullyQualifiedTypeName name="javax.swing.RepaintManager"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.RenderingAnImage.MyThread"/>
 </qualifiedTypeNameHistroy>

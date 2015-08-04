@@ -1,0 +1,80 @@
+package ba.bitcamp.week12.day02;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class BackgroundCalculations extends JFrame {
+
+	private static final long serialVersionUID = 2085671979307531007L;
+
+	JPanel panel = new JPanel();
+	static JLabel label = new JLabel();
+	JButton start = new JButton("Start");
+	static int counter = 0;
+
+	public BackgroundCalculations() {
+
+		add(panel);
+
+		panel.setLayout(new BorderLayout());
+		panel.add(label, BorderLayout.CENTER);
+		panel.add(start, BorderLayout.SOUTH);
+		start.addActionListener(new Action());
+
+		setTitle("Background calculations");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(300, 200);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setVisible(true);
+
+	}
+
+	static class MyThread implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 10; i < 10000001; i++) {
+				int counter2 = 0;
+				for (int j = 1; j <= i; j++) {
+					if (i % j == 0) {
+						counter2++;
+						if (counter2 <= 2) {
+							counter++;
+						}
+					}
+				}
+
+			}
+			label.setText(Integer.toString(counter));
+
+		}
+
+	}
+
+	public class Action implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (e.getSource() == start) {
+				Thread t = new Thread(new MyThread());
+				t.start();
+			}
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		new BackgroundCalculations();
+
+	}
+
+}

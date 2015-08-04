@@ -1,0 +1,14 @@
+package ba.bitcamp.week12.day02;
+
+import javax.swing.JFrame;
+
+public class StoppingMultipleThreads extends JFrame {
+
+	private static final long serialVersionUID = -5171817768072316647L;
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

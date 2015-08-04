@@ -1,0 +1,56 @@
+package ba.bitcamp.week12.day02;
+
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class RenderingAnImage extends JFrame {
+
+	private static final long serialVersionUID = 4809338752402490908L;
+
+	JPanel panel = new JPanel();
+	BufferedImage image = null;
+
+	public RenderingAnImage() {
+		add(panel);
+
+		try {
+			image = ImageIO
+					.read(new URL(
+							"http://znamo.ba/wp-content/uploads/2015/05/Sarajevo-sampion2015.jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		setTitle("Rendering an image");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(1024, 800);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setVisible(true);
+
+	}
+
+	public class MyPanel extends JPanel {
+
+		@Override
+		protected void paintComponent(Graphics g) {
+
+			g.drawImage(image, 0, 0, null);
+			super.paintComponent(g);
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		new RenderingAnImage();
+	}
+
+}

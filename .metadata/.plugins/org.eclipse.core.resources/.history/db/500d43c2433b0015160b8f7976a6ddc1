@@ -1,0 +1,5 @@
+package ba.bitcamp.week12.day03.predavanja;
+
+public class BlockingQueueExample {
+
+}

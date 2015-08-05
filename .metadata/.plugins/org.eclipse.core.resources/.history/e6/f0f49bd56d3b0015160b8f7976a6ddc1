@@ -1,0 +1,73 @@
+package ba.bitcamp.week12.day03.vjezbe;
+
+import java.util.ArrayList;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Task1 {
+
+	static LinkedBlockingQueue<Runnable> queue;
+	static ArrayList<Consumer> consumers;
+	static int counter = 0;
+
+	public static void main(String[] args) {
+		queue = new LinkedBlockingQueue<>();
+		// Produce the tasks and add them to the queue
+		for (int i = 0; i < 1; i++) {
+			queue.add(new Task());
+		}
+
+		// Make the consumers and let them consume
+		consumers = new ArrayList<>();
+		for (int i = 0; i < 8; i++) {
+			Consumer s = new Consumer();
+			s.start();
+			try {
+				s.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			consumers.add(s);
+		}
+
+	}
+
+	// Consumers
+	static class Consumer extends Thread {
+
+		@Override
+		public void run() {
+			while (!queue.isEmpty()) {
+				try {
+					Runnable job = queue.take();
+					job.run();
+				} catch (InterruptedException e) {
+					break;
+				}
+			}
+		}
+	}
+
+	// Jobs to do
+	static class Task implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 10; i < 20; i++) {
+				int counter2 = 0;
+				for (int j = 1; j <= i; j++) {
+					if (i % j == 0) {
+						counter2++;
+						if (counter2 == 2) {
+							counter++;
+						}
+					}
+				}
+
+			}
+			System.out.println(counter);
+		}
+
+	}
+
+}

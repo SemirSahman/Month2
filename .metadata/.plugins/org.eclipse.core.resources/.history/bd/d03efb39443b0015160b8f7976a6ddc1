@@ -1,0 +1,53 @@
+package ba.bitcamp.week12.day03.predavanja;
+
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class BlockingQueueExample {
+
+	private static ArrayBlockingQueue tasks = new ArrayBlockingQueue(10);
+
+	public static void startExample() {
+
+		new Producer().start();
+		new Consumer().start();
+
+	}
+
+	private static class Producer extends Thread {
+
+		@Override
+		public void run() {
+			try {
+				Thread.sleep(1000);
+				tasks.put("Hello");
+				Thread.sleep(1000);
+				tasks.put(1);
+				Thread.sleep(1000);
+				tasks.put("World");
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	private static class Consumer extends Thread {
+
+		@Override
+		public void run() {
+			System.out.println("Consumer started");
+
+			try {
+				System.out.println(tasks.take());
+				System.out.println(tasks.take());
+				System.out.println(tasks.take());
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,230 @@
+package ba.bitcamp.week12.day03.vjezbe;
+
+import java.util.ArrayList;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Task1 {
+
+	static LinkedBlockingQueue<Runnable> queue;
+	static ArrayList<Consumer> consumers;
+	static int counter = 0;
+
+	public static void main(String[] args) {
+		queue = new LinkedBlockingQueue<>();
+		// Produce the tasks and add them to the queue
+		for (int i = 0; i < 1; i++) {
+			queue.add((Runnable) new Task());
+			queue.add((Runnable) new Task2());
+			queue.add((Runnable) new Task3());
+			queue.add((Runnable) new Task4());
+			queue.add((Runnable) new Task5());
+			queue.add((Runnable) new Task6());
+			queue.add((Runnable) new Task7());
+			queue.add((Runnable) new Task8());
+			
+		}
+
+		// Make the consumers and let them consume
+		consumers = new ArrayList<>();
+		for (int i = 0; i < 8; i++) {
+			Consumer s = new Consumer();
+			s.start();
+			
+			consumers.add(s);
+		}
+
+		
+		for (int i = 0; i < 8; i++) {
+			try {
+				consumers.get(i).join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+	// Consumers
+	static class Consumer extends Thread {
+
+		@Override
+		public void run() {
+			while (!queue.isEmpty()) {
+				try {
+					Runnable job = queue.take();
+					job.run();
+				} catch (InterruptedException e) {
+					break;
+				}
+			}
+		}
+	}
+
+	// Jobs to do
+	static class Task implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 10; i < 125_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+	
+	static class Task2 implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 125_000; i < 250_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+	
+	static class Task3 implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 250_000; i < 375_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+	
+	
+	static class Task4 implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 375_000; i < 500_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+	
+	
+	
+	static class Task5 implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 500_000; i <625_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+	
+	
+	static class Task6 implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 625_000; i < 750_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+	
+	
+	static class Task7 implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 750_000; i < 875_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+	
+	
+	static class Task8 implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 875_000; i < 1_000_000; i++) {
+				boolean isPrime = true;
+				for (int j = 2; j < i; j++) {
+					if (i % j == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+				if (isPrime)
+					counter++;
+			}
+			System.out.println(counter);
+		}
+
+	}
+
+}

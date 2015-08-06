@@ -1,0 +1,92 @@
+package ba.bitcamp.week12.day04.predavanja;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class ClientChatGUI extends JFrame {
+
+	JTextField text = new JTextField("Enter message");
+	JButton button = new JButton("Send");
+	JTextArea area = new JTextArea();
+	JPanel panel1 = new JPanel();
+	JPanel panel2 = new JPanel();
+	private BufferedReader reader;
+	private ExecutorService pool = Executors.newSingleThreadExecutor();
+
+	public ClientChatGUI() {
+		try {
+
+			Socket socket = new Socket();
+
+			socket.connect(new InetSocketAddress("localhost", 7777));
+
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
+					socket.getOutputStream()));
+			reader = new BufferedReader(new InputStreamReader(
+					socket.getInputStream()));
+
+			add(text);
+
+			add(button);
+
+			button.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+
+					pool.submit(new Runnable() {
+
+						@Override
+						public void run() {
+							try {
+								writer.write(text.getText());
+								text.setText("");
+								writer.newLine();
+								writer.flush();
+							} catch (IOException e1) {
+
+								e1.printStackTrace();
+							}
+
+						}
+					});
+
+				}
+			});
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		setLayout(new GridLayout(2, 1));
+		setLocationRelativeTo(null);
+		setSize(400, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+
+		new ClientChatGUI();
+
+	}
+
+}

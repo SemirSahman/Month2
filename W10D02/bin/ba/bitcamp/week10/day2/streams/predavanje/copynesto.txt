@@ -1,5 +1,3 @@
 prva linija
 druga linija
-treca linijaprva linija
-druga linija
 treca linijaHello World

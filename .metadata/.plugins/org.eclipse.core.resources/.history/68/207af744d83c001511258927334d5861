@@ -1,0 +1,110 @@
+package ba.bitcamp.week12.day04.predavanja;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Server {
+
+	private static LinkedBlockingQueue<Client> clients;
+	private static LinkedBlockingQueue<Message> messages;
+	private static ExecutorService pool = Executors.newFixedThreadPool(8);
+
+	public static void main(String[] args) {
+
+		clients = new LinkedBlockingQueue<>();
+		messages = new LinkedBlockingQueue<>();
+		
+		pool.submit(new Listener());
+		pool.submit(new Listener());
+		pool.submit(new Listener());
+		pool.submit(new Listener());
+		pool.submit(new Listener());
+		pool.submit(new Listener());
+		pool.submit(new Listener());
+		pool.submit(new Listener());
+
+		try {
+			ServerSocket server = new ServerSocket(6815);
+			while (true) {
+				Socket client = server.accept();
+				clients.add(new Client(client));
+
+				new Thread(new Listener()).start();
+				new Thread(new Sender()).start();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	private static class Listener implements Runnable {
+
+		@Override
+		public void run() {
+			Client c = null;
+			try {
+				c = clients.take();
+				BufferedReader reader = c.getReader();
+				StringBuilder st = new StringBuilder();
+				
+					while (reader.ready()) {
+						st.append(reader.readLine());
+						Message message = new Message(c.getId(), st.toString());
+						messages.add(message);
+
+					}
+					clients.add(c);
+
+
+			} catch (InterruptedException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			pool.execute(this);
+
+		}
+
+	}
+
+	private static class Sender implements Runnable {
+
+		@Override
+		public void run() {
+			try {
+				Message m = messages.take();
+				Client[] clientArr = null;
+				
+				synchronized (clients) {
+					clientArr = new Client[clients.size()];
+					for (int i = 0; i < clientArr.length; i++) {
+						clientArr[i] = clients.take();
+						clients.add(clientArr[i]);
+					}
+
+				}
+
+				for (int i = 0; i < clientArr.length; i++) {
+					BufferedWriter writer = clientArr[i].getWriter();
+					writer.write(m.getMessage());
+					writer.flush();
+				}
+				pool.submit(this);
+
+			} catch (InterruptedException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+
+}

@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
+import java.util.Iterator;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class Client {
 
@@ -13,6 +15,7 @@ public class Client {
 	private String id;
 	private BufferedReader reader;
 	private BufferedWriter writer;
+	private LinkedBlockingQueue<Message> messages;
 
 	public Client(Socket client) {
 		this.client = client;
@@ -22,6 +25,7 @@ public class Client {
 					client.getInputStream()));
 			writer = new BufferedWriter(new OutputStreamWriter(
 					client.getOutputStream()));
+			messages = new LinkedBlockingQueue<Message>();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -40,12 +44,33 @@ public class Client {
 	public BufferedWriter getWriter() {
 		return writer;
 	}
-	
-	public void close(){
+
+	public void close() {
 		try {
 			client.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void addMessage(Message message) {
+		messages.add(message);
+	}
+
+	public void sendMessage() {
+		Iterator<Message> it = messages.iterator();
+		try {
+			while (it.hasNext()) {
+				Message m = it.next();
+				writer.write(it.next().getMessage());
+				messages.remove(m);
+
+			}
+
+			writer.flush();
+		} catch (IOException e) {
+			messages.clear();
 			e.printStackTrace();
 		}
 	}

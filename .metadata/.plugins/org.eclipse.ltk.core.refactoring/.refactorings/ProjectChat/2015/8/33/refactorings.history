@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ba.bitcamp.chatProject2.ChatClient&apos; to &apos;ClientChat&apos;&#x0A;- Original project: &apos;ProjectChat&apos;&#x0A;- Original element: &apos;ba.bitcamp.chatProject2.ChatClient&apos;&#x0A;- Renamed element: &apos;ba.bitcamp.chatProject2.ClientChat&apos;&#x0A;- Update references to refactored element&#x0A;- Rename similarly named elements&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ChatClient&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ba.bitcamp.chatProject2{ChatClient.java[ChatClient" matchStrategy="1" name="ClientChat" qualified="false" references="true" similarDeclarations="true" stamp="1439285345347" textual="false" version="1.0"/>
+</session>

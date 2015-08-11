@@ -1,0 +1,49 @@
+package ba.bitcamp.week13.day02.vjezbe;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Task1 {
+	
+	static private ArrayList<Object> list = new ArrayList<Object>();
+	
+	static String line = null;
+
+	public static void main(String[] args) {
+
+		FileReader fileReader;
+		try {
+			fileReader = new FileReader(new File("semir.csv"));
+			BufferedReader br = new BufferedReader(fileReader);
+			br.readLine();
+			while ((line = br.readLine()) != null) {
+				
+				String[] line = br.readLine().split(",");
+				
+				int id = Integer.parseInt(line[0]);
+				String name = line[1];
+				int year = Integer.parseInt(line[2]);
+				int salary = Integer.parseInt(line[3]);
+				
+				Object o = new Object(id, name, year, salary);
+				
+				list.add(o);
+				
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(list);
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package ba.bitcamp.enver.projectchat.prvi;
+
+public class Server {
+	
+
+
+	public static void main(String[] args) {
+		new ServerGui();
+	}
+
+}

@@ -1,0 +1,20 @@
+package ba.bitcamp.ebean;
+
+import org.avaje.agentloader.AgentLoader;
+
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.EbeanServer;
+
+public class ShopApplication {
+
+	static {
+		AgentLoader.loadAgentFromClasspath("avaje-ebeanorm-agent","debug=1;packages=ba.bitcamp.ebean.models.**");
+	}
+	
+	private static EbeanServer server = Ebean.getServer("h2");
+	
+	public static void main(String[] args) {
+
+	}
+
+}

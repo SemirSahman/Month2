@@ -1,0 +1,103 @@
+package ba.bitcamp.week14.day01.task4;
+
+public class Player {
+	
+	private int id;
+	private String name;
+	private int wins;
+	private int losses;
+	private int points;
+	private int scoredPlus;
+	private int scoredMinus;
+	private char fromGroup;
+	
+	public Player(int id, String name, int wins, int losses, int points,
+			int scoredPlus, int scoredMinus, char fromGroup) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.wins = wins;
+		this.losses = losses;
+		this.points = points;
+		this.scoredPlus = scoredPlus;
+		this.scoredMinus = scoredMinus;
+		this.fromGroup = fromGroup;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getWins() {
+		return wins;
+	}
+
+	public void setWins(int wins) {
+		this.wins = wins;
+	}
+
+	public int getLosses() {
+		return losses;
+	}
+
+	public void setLosses(int losses) {
+		this.losses = losses;
+	}
+
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	public int getScoredPlus() {
+		return scoredPlus;
+	}
+
+	public void setScoredPlus(int scoredPlus) {
+		this.scoredPlus = scoredPlus;
+	}
+
+	public int getScoredMinus() {
+		return scoredMinus;
+	}
+
+	public void setScoredMinus(int scoredMinus) {
+		this.scoredMinus = scoredMinus;
+	}
+
+	public char getFromGroup() {
+		return fromGroup;
+	}
+
+	public void setFromGroup(char fromGroup) {
+		this.fromGroup = fromGroup;
+	}
+
+	@Override
+	public String toString() {
+		return "Player [id=" + id + ", name=" + name + ", wins=" + wins
+				+ ", losses=" + losses + ", points=" + points + ", scoredPlus="
+				+ scoredPlus + ", scoredMinus=" + scoredMinus + ", fromGroup="
+				+ fromGroup + "]";
+	}
+	
+	
+	
+	
+
+}

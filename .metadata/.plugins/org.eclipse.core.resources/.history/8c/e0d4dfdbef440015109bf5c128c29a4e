@@ -1,0 +1,26 @@
+package ba.bitcamp.ebean.models;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "product")
+public class Product {
+
+	@Id
+	Long id;
+
+	@Column(length = 255)
+	String title;
+
+	@Column(precision = 10)
+	BigDecimal price;
+
+	@Column
+	Integer quantity;
+
+}

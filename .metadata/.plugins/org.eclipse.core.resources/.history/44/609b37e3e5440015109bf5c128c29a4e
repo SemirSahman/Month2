@@ -1,0 +1,10 @@
+package ba.bitcamp.ebean;
+
+public class ShopApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

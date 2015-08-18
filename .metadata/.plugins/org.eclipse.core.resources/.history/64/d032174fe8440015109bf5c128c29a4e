@@ -1,0 +1,5 @@
+package ba.bitcamp.ebean.models;
+
+public class User {
+
+}

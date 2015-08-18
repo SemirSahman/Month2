@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.StoppingMultipleThreads"/>
-<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.Task2.MyThread"/>
-<fullyQualifiedTypeName name="javax.swing.JLabel"/>
-<fullyQualifiedTypeName name="javax.swing.JButton"/>
-<fullyQualifiedTypeName name="javax.swing.JPanel"/>
-<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
-<fullyQualifiedTypeName name="java.net.URI"/>
-<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
-<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.RenderingAnImage.MyPanel"/>
-<fullyQualifiedTypeName name="javax.swing.RepaintManager"/>
-<fullyQualifiedTypeName name="ba.bitcamp.week12.day02.RenderingAnImage.MyThread"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week12.day03.predavanja.BlockingQueueExample"/>
 <fullyQualifiedTypeName name="ba.bitcamp.week12.day03.predavanja.BlockingQueueExample.Calculate"/>
@@ -60,4 +49,15 @@
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="ba.bitcamp.chatProject7.Client"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.beans.Statement"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="ba.bitcamp.week14.day01.task4.Team"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="ba.bitcamp.ebean.models.User"/>
+<fullyQualifiedTypeName name="ba.bitcamp.ebean.models.Product"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="ba.bitcamp.ebean.models.Purchase"/>
 </qualifiedTypeNameHistroy>

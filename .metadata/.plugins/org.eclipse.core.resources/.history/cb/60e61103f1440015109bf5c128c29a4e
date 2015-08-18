@@ -1,0 +1,22 @@
+package ba.bitcamp.ebean.models;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "purchase")
+public class Purchase {
+
+	@Id
+	Long id;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	Product product;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	User user;
+
+}

@@ -1,0 +1,33 @@
+package ba.bitcamp.ebean;
+
+import java.math.BigDecimal;
+
+import org.avaje.agentloader.AgentLoader;
+
+import ba.bitcamp.ebean.models.User;
+
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.EbeanServer;
+
+public class ShopApplication {
+
+	static {
+		AgentLoader.loadAgentFromClasspath("avaje-ebeanorm-agent","debug=1;packages=ba.bitcamp.ebean.models.**");
+	}
+	
+	private static EbeanServer server = Ebean.getServer("h2");
+	
+	public static void main(String[] args) {
+		
+		User first = new User();
+		first.setFullName("Mase zna se");
+		first.setEmail("maseznase@bitcamp.ba");
+		first.setBalance(new BigDecimal(0));
+		
+		
+		Ebean.save(first);
+
+		System.out.println(first.getId());
+	}
+
+}

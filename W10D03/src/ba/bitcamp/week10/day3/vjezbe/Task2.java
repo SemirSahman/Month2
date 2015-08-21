@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
-
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -52,7 +50,7 @@ public class Task2 {
 				in.readLine();
 				while (in.ready()) {
 					String line = in.readLine();
-					StringTokenizer st = new StringTokenizer(line, ",");
+					//StringTokenizer st = new StringTokenizer(line, ",");
 
 					counter++;
 

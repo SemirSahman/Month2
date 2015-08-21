@@ -23,8 +23,8 @@ public class Sockets {
 			Socket client = ss.accept();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					client.getInputStream()));
-			String ip = client.getInetAddress().getHostAddress();
-			String name = ClientHashMap.getName(ip);
+			//String ip = client.getInetAddress().getHostAddress();
+			//String name = ClientHashMap.getName(ip);
 			msg = reader.readLine();
 			System.out.println("Connected");
 
@@ -39,6 +39,10 @@ public class Sockets {
 			writer.write(msg);
 			writer.newLine();
 			writer.flush();
+			
+			in.close();
+			clientZaid.close();
+			ss.close();
 
 			System.out.println("Message sent to Zaid");
 
@@ -67,6 +71,7 @@ public class Sockets {
 				System.out.println(ClientHashMap.map.get(keyString));
 
 				System.out.println("Connection succesfull");
+				client2.close();
 				break;
 			} catch (IOException e) {
 				System.out.println("Server is turned off");

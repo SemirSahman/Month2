@@ -14,6 +14,8 @@ import javax.swing.JTextArea;
 
 public class SendMessage extends JFrame {
 
+	private static final long serialVersionUID = 1569591554758930140L;
+
 	JTextArea text = new JTextArea();
 	JButton button = new JButton("Send");
 
@@ -37,14 +39,15 @@ public class SendMessage extends JFrame {
 					writer.write(text.getText());
 					writer.newLine();
 					writer.flush();
+					
+					socket.close();
 
 				} catch (IOException ex) {
 					ex.printStackTrace();
 				}
-
 			}
 		});
-
+		
 		setSize(800, 800);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);

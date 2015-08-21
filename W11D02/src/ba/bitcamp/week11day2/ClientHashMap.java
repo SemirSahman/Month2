@@ -36,6 +36,7 @@ public class ClientHashMap {
 				return (list.get(random));
 			}
 			System.out.println("No.");
+			reader.close();
 		}
 
 	}

@@ -30,6 +30,11 @@ public class RingSender {
 			writer.newLine();
 			writer.close();
 			System.out.println("Poslao sam poruku Djomli");
+			
+			
+			socket.close();
+			server.close();
+			
 
 
 		} catch (IOException e) {

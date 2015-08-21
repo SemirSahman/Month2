@@ -1,0 +1,56 @@
+package ba.bitcamp.week14.day05;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+
+public class Client {
+
+	public static void main(String[] args) {
+
+		try {
+			System.out.println("CLIENT Application started");
+			Socket socket = new Socket("localhost", 1946);
+			System.out.println("CLIENT connected to localhost");
+
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
+					socket.getOutputStream()));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					socket.getInputStream()));
+
+			writer.write("GET /Users/semir.sahman/Downloads/maxresdefault.jpg 1024");
+			writer.newLine();
+			writer.flush();
+
+
+			FileOutputStream fileOutput = new FileOutputStream("output.jpg");
+			InputStream is = socket.getInputStream();
+
+			byte[] data = new byte[1024];
+			int bytesRead;
+
+			while ((bytesRead = is.read(data, 0, 1024)) > 0) {
+				fileOutput.write(data, 0, bytesRead);
+				System.out.println("sending");
+			}
+			System.out.println("file ready");
+
+			is.close();
+
+			reader.close();
+			writer.close();
+			socket.close();
+			fileOutput.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

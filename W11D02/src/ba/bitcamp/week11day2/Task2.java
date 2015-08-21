@@ -35,6 +35,8 @@ public class Task2 {
 			is.close();
 			reader.close();
 			writer.close();
+			fileOutput.close();
+			socket.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();

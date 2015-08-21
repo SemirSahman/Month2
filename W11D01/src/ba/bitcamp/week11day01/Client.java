@@ -16,7 +16,7 @@ public class Client {
 
 		try {
 			System.out.println("CLIENT Application started");
-			Socket socket = new Socket("10.0.82.18", 5555);
+			Socket socket = new Socket("localhost", 1946);
 			System.out.println("CLIENT connected to localhost");
 
 			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
@@ -59,6 +59,8 @@ public class Client {
 			input.close();
 			reader.close();
 			writer.close();
+			fileOutput.close();
+			socket.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();
